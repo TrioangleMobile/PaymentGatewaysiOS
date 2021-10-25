@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   TODO: This description is used to generate tags and improve search results
                    DESC
 
-  spec.homepage     = "https://vignesh_palanivel_@bitbucket.org/vignesh_palanivel_/paymentlibrary_ios"
+  spec.homepage     = "https://github.com/iOS-Team-Trioangle/PaymentHelper"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -81,7 +81,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://vignesh_palanivel_@bitbucket.org/vignesh_palanivel_/paymentlibrary_ios.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/iOS-Team-Trioangle/PaymentHelper.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
