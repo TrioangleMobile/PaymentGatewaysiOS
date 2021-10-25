@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PaymentHandler {
+open class PaymentHandler {
     
     static let shared = PaymentHandler()
     
