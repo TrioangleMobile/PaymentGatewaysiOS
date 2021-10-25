@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PaymentHandler : NSObject {
+class PaymentHandler {
     
     static let shared = PaymentHandler()
     
