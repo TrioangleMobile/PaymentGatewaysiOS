@@ -7,13 +7,13 @@
 
 import Foundation
 
-open class PaymentHandler {
+open class PaymentHandler : NSObject {
     
-    static let shared = PaymentHandler()
+    public static let shared = PaymentHandler()
     
-    func setStripe(Number: String,
-                   amount: Double,
-                   cvc: String) {
+    public func setStripe(Number: String,
+                          amount: Double,
+                          cvc: String) {
         print("Number: " + Number)
         print("amount: " + amount.description)
         print("cvc: " + cvc)
