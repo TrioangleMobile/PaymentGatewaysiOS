@@ -15,7 +15,6 @@
 		184C1502272680880018A00C /* PaymentHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 184C14F4272680880018A00C /* PaymentHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		184C150E272686A30018A00C /* PaymentHelper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 184C150D272686A30018A00C /* PaymentHelper.podspec */; };
 		18F4CB5C273003E100DC9CE7 /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4CB5A273003DF00DC9CE7 /* PaymentHandler.swift */; };
-		18F4CB5D273003E500DC9CE7 /* BrintreeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4CB5B273003DF00DC9CE7 /* BrintreeHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -316,7 +315,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				184C14F6272680880018A00C /* PaymentHelper.docc in Sources */,
-				18F4CB5D273003E500DC9CE7 /* BrintreeHandler.swift in Sources */,
 				18F4CB5C273003E100DC9CE7 /* PaymentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -63,6 +63,7 @@
 		224FE786370601169AB6AB3E9671F7F3 /* BTUIKMasterCardVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BBE251D659D1777C8611763CB13BB49 /* BTUIKMasterCardVectorArtView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		227676D99AA691733FA78E26CE6F2C4C /* BTUIKPayPalWordmarkVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = C50372C50D4D878C6D57151E67A8A7AF /* BTUIKPayPalWordmarkVectorArtView.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		22EFCB2C9E6D2B54EA23AA40C6DAD7F1 /* BTPayPalDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2214B9F588F086D0164D76B136CD42FC /* BTPayPalDriver.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
+		250DAA3BDE5862E4383E4BC15B173E20 /* Pods-PaymentHelper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F75225E02C4AA43120C5D8A8B7C6FB29 /* Pods-PaymentHelper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		252F0854B1B2DE65A4C535BE2C974C83 /* BTVaultManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 723536BEBE78650BFF806AFAFF731230 /* BTVaultManagementViewController.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		258DEEAADC6E4844BF60C2DFFB716102 /* BTPreferredPaymentMethodsResult_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A1ACFC21D316321DF6F8CF15B17AF2D /* BTPreferredPaymentMethodsResult_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		26354218A83ABB60B407DA0D14FF7FBF /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F128FC2A7B9757BFBA1AFEE88F2EE6A0 /* ko.lproj */; };
@@ -212,7 +213,6 @@
 		83778ABD2C535192A7F241D17B3F4035 /* BTDropInLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D85DC0E27CA6C3DDA52BD5618B33B9 /* BTDropInLocalization.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		843A0FBAB0A072155BF35D14534057D4 /* BTPayPalVaultRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 51935A8E98F84125A783A2AF9D8DA8D8 /* BTPayPalVaultRequest.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		84C7BED4846993FF5C9A24845205BB62 /* BTAppContextSwitcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E85D3B0247457EBF95005E7DAFC7A3 /* BTAppContextSwitcher.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
-		84D36729AD92EC0A900248F04E270A3E /* Pods-PaymentHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6645D31FD271289EE435CBA013B871B /* Pods-PaymentHelper-dummy.m */; };
 		85E755C1D5446DB5D82EB2293FF2EA75 /* BTPaymentSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49B14C89D4E68A086D97E730C2201DA /* BTPaymentSelectionViewController.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		8727951568A876C7E26972B05ABA4652 /* BTCard.h in Headers */ = {isa = PBXBuildFile; fileRef = D0C06DACAEDB50550B73405AF717249A /* BTCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		873052627205199C262EDA04181DB9A5 /* BTUIKPayPalMonogramCardView.h in Headers */ = {isa = PBXBuildFile; fileRef = DA89B1DC6FAB149144A3B58D70A502F1 /* BTUIKPayPalMonogramCardView.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -252,6 +252,7 @@
 		9C5A745BC201952AE27E96BFB93FC78A /* BTUIKDinersClubVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D61F6328D4DCF7DF4A590D38213DFB /* BTUIKDinersClubVectorArtView.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		9D7894CD9700D025156DEA78EF3FBEED /* BTUIKVisaVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 962E6228D467D4E0C770A51DE1A47F03 /* BTUIKVisaVectorArtView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9DE3FACE8E38783AE4ABE7BF07D94BA4 /* BraintreeCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 08B41DB198DEEC255572BA1E6900F113 /* BraintreeCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A003E10184B66AB2F24736CB69F3ABA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B1758C36319B00780D3E2270E62A04 /* Foundation.framework */; };
 		A01C52F5F93F3519198AF5B8CE3C510D /* BTPayPalCreditFinancingAmount_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 46357E6CE686A1AC07631500B4C57615 /* BTPayPalCreditFinancingAmount_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A13BC70A035F49115FAEF54EE213D1B2 /* BTUIKExpiryFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D2C9822DCAEC4634365FF96D971529 /* BTUIKExpiryFormField.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A1927E81949F3E591FC332BF143A6320 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6348EA1E72FFA487E5EB95CB62FBA2CF /* UIKit.framework */; };
@@ -259,7 +260,6 @@
 		A201E909AAF48FFC929F124899AE6C35 /* BTPayPalVaultRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C12CE47BEB196A48B01540743069FAA /* BTPayPalVaultRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2A1F800015AED39AA8E5147C372EC09 /* BTUIKMasterCardVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DEF42D0960607ECE18AC4ADD8FFAD3 /* BTUIKMasterCardVectorArtView.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		A4C4DDEE356EFD7654DE0DFA749D7AEE /* BTUIKLargeVenmoMonogramCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1050D86561723087111E15AA803B7E13 /* BTUIKLargeVenmoMonogramCardView.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
-		A4EF5AE1AD6B28ABC529CFA01C8C9EC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B1758C36319B00780D3E2270E62A04 /* Foundation.framework */; };
 		A56E1DCC4FC2125247872C1038B98408 /* BTConfiguration+UnionPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E1A40387A901FEC6955F45053E9710 /* BTConfiguration+UnionPay.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		A57616C9CEE6F1F39EAC4AAB0A1723D8 /* BTVenmoAccountNonce_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 8607CF9424EF2A25EB4B1732A8DB7684 /* BTVenmoAccountNonce_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A5CDDAF78368A8DDBAD64790261B1900 /* BTPayPalIDToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 50936DBEE4E3110FB12A3C80AA587933 /* BTPayPalIDToken.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
@@ -289,7 +289,6 @@
 		B5B681388F6757D5A9714667BE5E8E75 /* BTPostalAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 893C316711EDBDCD1423C74EA812F21E /* BTPostalAddress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8F30A7DE8AD7C3393BFE27F15F4057B /* BTURLUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 14022022ADF4C09440106774F29C7A7B /* BTURLUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B979C272D26C4AFC0C49F70BD7A62D46 /* da.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 9A73B767296D0F0ECBF5B33FC689B9DA /* da.lproj */; };
-		B98325F36E7BD63ABEDF96EE373F714F /* Pods-PaymentHelper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F75225E02C4AA43120C5D8A8B7C6FB29 /* Pods-PaymentHelper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA6B49E8115673AA3EBA78B6A850803B /* BTJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 325E8C6CFFF39BBF907A46EDAA8FF53B /* BTJSON.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		BB450E9989AF630DE982A38848313EC2 /* BTUIKCardExpiryFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 50E5B0C111C472D75CA4725B84576619 /* BTUIKCardExpiryFormat.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BBFD02A4B2E426E5FC1F5E3314447245 /* BTUIKLargeVisaVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = E32A138C08146EB4411AC31F5C74C9A3 /* BTUIKLargeVisaVectorArtView.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
@@ -364,6 +363,7 @@
 		EA3700A18C1D99F53DD28D653207A595 /* BTUIKVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCEE16F73ADA91CF8B9A89D6259C9382 /* BTUIKVectorArtView.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		EA43E7C2026A5F57A534DC2A348380B6 /* BTPaymentSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 198504F1C9F0ABE4D2A8245E72263CF7 /* BTPaymentSelectionViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EA735C0B1973DB596F1EA19AD2BA360E /* BTCardNonce_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9077E75C9811CCEA7EC612F2C2898612 /* BTCardNonce_Internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EB23530EC277A2CC26C48F56A684F236 /* Pods-PaymentHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6645D31FD271289EE435CBA013B871B /* Pods-PaymentHelper-dummy.m */; };
 		EC9E2B96A71D2A9FDDBD311D0D514A6B /* BTUIKPaymentOptionCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B55E99F3BE09C6B8ECF093A13ED521ED /* BTUIKPaymentOptionCardView.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
 		EE2663FBDE126A074108B95DA51B581F /* BTUIKFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = ED39A1D47006AF9FC17BA2A5204BBF4E /* BTUIKFormField.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EE36548CC30DF0A520FB819EE4D2EB35 /* BTPaymentSelectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 709DEB6EA5F8CDF309BA2C2720A8CFA3 /* BTPaymentSelectionHeaderView.m */; settings = {COMPILER_FLAGS = "-Wall -Werror -Wextra"; }; };
@@ -414,12 +414,26 @@
 			remoteGlobalIDString = BAE8F711B8B7870AC224B3B1C5FB6540;
 			remoteInfo = Braintree;
 		};
+		34624C11EEFAD22EAEC579CCB49499BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 239150F002EFA3C206FCDF47B01A934C;
+			remoteInfo = BraintreeDropIn;
+		};
 		4910515FB4F6132CCEFCA426F1459FD2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 239150F002EFA3C206FCDF47B01A934C;
 			remoteInfo = BraintreeDropIn;
+		};
+		E5B456D9082B1E7CEBD749C568FD5FE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAE8F711B8B7870AC224B3B1C5FB6540;
+			remoteInfo = Braintree;
 		};
 		F98A1C988CCB1A599DB841668DE13CBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -862,14 +876,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4FD1E1F48773A4A6E2F8372B4D9D381E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A4EF5AE1AD6B28ABC529CFA01C8C9EC6 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E2202D50DCC49C84EAD869E6E960DB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -882,6 +888,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE0FE92AAB60CBD6569FBA98E77E9F1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2F6B9C000401441BFEDDE435989DDAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A003E10184B66AB2F24736CB69F3ABA3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1515,6 +1529,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		293D87B4F8C41333EBE6FB68E4B91F71 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250DAA3BDE5862E4383E4BC15B173E20 /* Pods-PaymentHelper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2C5D9598560E0E72C62BB94F3605D306 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1644,14 +1666,6 @@
 				4622FD0E78085E4AF0A986F2D46D2A94 /* BTVenmoRequest.h in Headers */,
 				409A936C77D90DE8FA1291828CD24EC3 /* BTVenmoRequest_Internal.h in Headers */,
 				919C62CD4CB7ABD101DFF62739EA5B76 /* BTViewControllerPresentingDelegate.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		434370C41C8C66C3FC2A50995F28E42B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B98325F36E7BD63ABEDF96EE373F714F /* Pods-PaymentHelper-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1788,16 +1802,18 @@
 		};
 		514E3ADFEE35811FEEFBF9781D505099 /* Pods-PaymentHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AED66A6BCD0DD323902D6CEFDE77E69A /* Build configuration list for PBXNativeTarget "Pods-PaymentHelper" */;
+			buildConfigurationList = B3BD284D5BEE12E454930F53AC15CE29 /* Build configuration list for PBXNativeTarget "Pods-PaymentHelper" */;
 			buildPhases = (
-				434370C41C8C66C3FC2A50995F28E42B /* Headers */,
-				E4F0997A6E1CE0C7BD5E26B105554F37 /* Sources */,
-				4FD1E1F48773A4A6E2F8372B4D9D381E /* Frameworks */,
-				DD60F169FC56D33CB22E712638D92F00 /* Resources */,
+				293D87B4F8C41333EBE6FB68E4B91F71 /* Headers */,
+				03350FA5F0BBE3C61E44EF65DD598FB5 /* Sources */,
+				F2F6B9C000401441BFEDDE435989DDAA /* Frameworks */,
+				9D24A708CAE87BCA69FD0F3C256515D8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				08D30C6C4BEF49159037FFC72BAB9F24 /* PBXTargetDependency */,
+				9761055AD2E09FB2BDE0DCC1426C2678 /* PBXTargetDependency */,
 			);
 			name = "Pods-PaymentHelper";
 			productName = Pods_PaymentHelper;
@@ -1940,7 +1956,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD60F169FC56D33CB22E712638D92F00 /* Resources */ = {
+		9D24A708CAE87BCA69FD0F3C256515D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1977,6 +1993,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		03350FA5F0BBE3C61E44EF65DD598FB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB23530EC277A2CC26C48F56A684F236 /* Pods-PaymentHelper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		144FD5C4552B3824EC9AF1AA6D9A18FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2162,17 +2186,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4F0997A6E1CE0C7BD5E26B105554F37 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				84D36729AD92EC0A900248F04E270A3E /* Pods-PaymentHelper-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		08D30C6C4BEF49159037FFC72BAB9F24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Braintree;
+			target = BAE8F711B8B7870AC224B3B1C5FB6540 /* Braintree */;
+			targetProxy = E5B456D9082B1E7CEBD749C568FD5FE6 /* PBXContainerItemProxy */;
+		};
 		23BFE95F9DA96924B06343BD83C3E597 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "BraintreeDropIn-BraintreeDropIn-Localization";
@@ -2190,6 +2212,12 @@
 			name = Braintree;
 			target = BAE8F711B8B7870AC224B3B1C5FB6540 /* Braintree */;
 			targetProxy = 1F08A8047EDB02F878CA2474DDE6B4C6 /* PBXContainerItemProxy */;
+		};
+		9761055AD2E09FB2BDE0DCC1426C2678 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BraintreeDropIn;
+			target = 239150F002EFA3C206FCDF47B01A934C /* BraintreeDropIn */;
+			targetProxy = 34624C11EEFAD22EAEC579CCB49499BF /* PBXContainerItemProxy */;
 		};
 		B3E3D34B4EBEF82E9C73199BD503EEAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2229,44 +2257,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2F1A8D1A5BE5B61B9BF5DDC99157B559 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B245A77048D0340810D26EBFC014EE93 /* Pods-PaymentHelper.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2339,43 +2329,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		37C4C29C617E0E972976A892642143E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F9BF729A6FA9DF1470CFA1333FC961B /* Pods-PaymentHelper.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2598,6 +2551,44 @@
 			};
 			name = Release;
 		};
+		D770554026A112B4726252C39C611941 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B245A77048D0340810D26EBFC014EE93 /* Pods-PaymentHelper.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		E6E8B7BB5C65409FF0D84DCF453CE52E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CF367B40B0CCB7A921D6B766B509684A /* BraintreeDropIn.debug.xcconfig */;
@@ -2652,6 +2643,43 @@
 			};
 			name = Release;
 		};
+		F1A574483E4E5D586EBF99F0AE108F88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F9BF729A6FA9DF1470CFA1333FC961B /* Pods-PaymentHelper.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2700,11 +2728,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AED66A6BCD0DD323902D6CEFDE77E69A /* Build configuration list for PBXNativeTarget "Pods-PaymentHelper" */ = {
+		B3BD284D5BEE12E454930F53AC15CE29 /* Build configuration list for PBXNativeTarget "Pods-PaymentHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37C4C29C617E0E972976A892642143E1 /* Debug */,
-				2F1A8D1A5BE5B61B9BF5DDC99157B559 /* Release */,
+				F1A574483E4E5D586EBF99F0AE108F88 /* Debug */,
+				D770554026A112B4726252C39C611941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
