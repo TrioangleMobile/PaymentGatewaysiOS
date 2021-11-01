@@ -17,9 +17,9 @@ enum BTErrors : Error{
     case clientCancelled
 }
 
-public
+
 extension BTErrors : LocalizedError {
-    open
+    public
     var errorDescription: String?{
         return self.localizedDescription
     }
@@ -27,17 +27,21 @@ extension BTErrors : LocalizedError {
 
 public
 protocol BrainTreeProtocol {
-    open func initalizeClient(with id : String)
-    open func authenticatePaymentUsing(_ view : UIViewController,
+    
+    func initalizeClient(with id : String)
+    
+    func authenticatePaymentUsing(_ view : UIViewController,
+                                  threeDSecureRequest : BTThreeDSecureRequest,
+                                  address : BTThreeDSecurePostalAddress,
                                   for amount : Double,
                                   result: @escaping BrainTreeHandler.BTResult)
-    open func authenticatePaypalUsing(_ view : UIViewController,
+    func authenticatePaypalUsing(_ view : UIViewController,
                                   for amount : Double,
                                   currency: String,
                                   result: @escaping BrainTreeHandler.BTResult)
 }
 
-public
+open
 class BrainTreeHandler : NSObject {
     static var ReturnURL  : String  {
         let bundle = Bundle.main
@@ -52,6 +56,7 @@ class BrainTreeHandler : NSObject {
         }
         return false
     }
+    public
     typealias BTResult = (Result<BTPaymentMethodNonce, Error>) -> Void
     static var `default` : BrainTreeProtocol = {
         BrainTreeHandler()
@@ -71,13 +76,13 @@ class BrainTreeHandler : NSObject {
 //MARK:- BrainTreeProtocol
 extension BrainTreeHandler : BrainTreeProtocol{
     
-    func initalizeClient(with id : String){
+    public func initalizeClient(with id : String){
         self.clientToken = id
         self.client = BTAPIClient(authorization: id)
         BTAppContextSwitcher.setReturnURLScheme(BrainTreeHandler.ReturnURL)
     }
     
-    func authenticatePaypalUsing(_ view: UIViewController,
+    public func authenticatePaypalUsing(_ view: UIViewController,
                                   for amount: Double,
                                   currency: String,
                                   result: @escaping BrainTreeHandler.BTResult) {
@@ -102,9 +107,12 @@ extension BrainTreeHandler : BrainTreeProtocol{
         }
     }
     
+    public
     func authenticatePaymentUsing(_ view : UIViewController,
+                                  threeDSecureRequest : BTThreeDSecureRequest,
+                                  address : BTThreeDSecurePostalAddress,
                                   for amount : Double,
-                  result: @escaping BTResult) {
+                                  result: @escaping BTResult) {
         guard let currentClientToken = self.clientToken else{
             result(.failure(BTErrors.clientNotInitialized))
             return
@@ -114,25 +122,25 @@ extension BrainTreeHandler : BrainTreeProtocol{
         
         
         _ = BTDropInRequest()
-        let threeDSecureRequest = BTThreeDSecureRequest()
-        threeDSecureRequest.amount = NSDecimalNumber(value: amount)
-        threeDSecureRequest.email = UserDefaults.value(for: .user_email_id) ?? "test@email.com"
-        threeDSecureRequest.versionRequested = .version2
-        
-        let address = BTThreeDSecurePostalAddress()
-        address.givenName = UserDefaults.value(for: .first_name) ?? "Albin" // ASCII-printable characters required, else will throw a validation error
-        address.surname = UserDefaults.value(for: .last_name) ?? "MrngStar" // ASCII-printable characters required, else will throw a validation error
-        address.phoneNumber = UserDefaults.value(for: .phonenumber) ?? "123456"
-    
-       
-        threeDSecureRequest.billingAddress = address
-        
-        // Optional additional information.
-        // For best results, provide as many of these elements as possible.
+//        let threeDSecureRequest = BTThreeDSecureRequest()
+//        threeDSecureRequest.amount = NSDecimalNumber(value: amount)
+//        threeDSecureRequest.email = ""//UserDefaults.value(for: .user_email_id) ?? "test@email.com" as! String
+//        threeDSecureRequest.versionRequested = .version2
+//
+//        let address = BTThreeDSecurePostalAddress()
+//        address.givenName = ""// UserDefaults.value(for: .first_name) ?? "Albin" as! String // ASCII-printable characters required, else will throw a validation error
+//        address.surname = ""//UserDefaults.value(for: .last_name) ?? "MrngStar" as! String // ASCII-printable characters required, else will throw a validation error
+//        address.phoneNumber = ""//UserDefaults.value(for: .phonenumber) ?? "123456" as! String
+//
+//
+//        threeDSecureRequest.billingAddress = address
+//
+//        // Optional additional information.
+//        // For best results, provide as many of these elements as possible.
         let info = BTThreeDSecureAdditionalInformation()
         info.shippingAddress = address
         threeDSecureRequest.additionalInformation = info
-        
+
         let dropInRequest = BTDropInRequest()
         dropInRequest.threeDSecureRequest = threeDSecureRequest
         
@@ -165,9 +173,9 @@ extension BrainTreeHandler : BrainTreeProtocol{
 }
 //MARK:- BTDropInViewControllerDelegate
 extension BrainTreeHandler : BTDropInControllerDelegate{
-    func reloadDropInData() { }
+    public func reloadDropInData() { }
 
-    func editPaymentMethods(_ sender: Any) {
+    public func editPaymentMethods(_ sender: Any) {
         
     }
     
@@ -206,12 +214,12 @@ extension BrainTreeHandler {
 
 extension BrainTreeHandler : BTViewControllerPresentingDelegate{
     
-    func paymentDriver(_ driver: Any,
+    public func paymentDriver(_ driver: Any,
                        requestsPresentationOf viewController: UIViewController) {
         
     }
  
-    func paymentDriver(_ driver: Any,
+    public func paymentDriver(_ driver: Any,
                        requestsDismissalOf viewController: UIViewController) {
         
     }
