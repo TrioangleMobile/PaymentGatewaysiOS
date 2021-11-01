@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02F0159784C7BCB0A181F5EA /* Pods_PaymentHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1295ACA1FEFBDD9C1AD1DFAF /* Pods_PaymentHelper.framework */; };
 		0855083CCE640241C15CD762 /* Pods_PaymentHelper_PaymentHelperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA2F5EFAC59F54400420EB3 /* Pods_PaymentHelper_PaymentHelperTests.framework */; };
+		182A53C8272FD30700621244 /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A53C7272FD30700621244 /* PaymentHandler.swift */; };
 		184C14F6272680880018A00C /* PaymentHelper.docc in Sources */ = {isa = PBXBuildFile; fileRef = 184C14F5272680880018A00C /* PaymentHelper.docc */; };
 		184C14FC272680880018A00C /* PaymentHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184C14F1272680880018A00C /* PaymentHelper.framework */; };
 		184C1501272680880018A00C /* PaymentHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C1500272680880018A00C /* PaymentHelperTests.swift */; };
@@ -28,12 +29,13 @@
 
 /* Begin PBXFileReference section */
 		1295ACA1FEFBDD9C1AD1DFAF /* Pods_PaymentHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		182A53C7272FD30700621244 /* PaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
 		184C14F1272680880018A00C /* PaymentHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PaymentHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		184C14F4272680880018A00C /* PaymentHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentHelper.h; sourceTree = "<group>"; };
 		184C14F5272680880018A00C /* PaymentHelper.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PaymentHelper.docc; sourceTree = "<group>"; };
 		184C14FB272680880018A00C /* PaymentHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		184C1500272680880018A00C /* PaymentHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHelperTests.swift; sourceTree = "<group>"; };
-		184C150D272686A30018A00C /* PaymentHelper.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = PaymentHelper.podspec; sourceTree = SOURCE_ROOT; };
+		184C150D272686A30018A00C /* PaymentHelper.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PaymentHelper.podspec; sourceTree = SOURCE_ROOT; };
 		7AA2F5EFAC59F54400420EB3 /* Pods_PaymentHelper_PaymentHelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentHelper_PaymentHelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83494983783B8214BF0E0E20 /* Pods-PaymentHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentHelper.debug.xcconfig"; path = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper.debug.xcconfig"; sourceTree = "<group>"; };
 		9F7EFEFB16C4B9B6BDCC1E29 /* Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig"; path = "Target Support Files/Pods-PaymentHelper-PaymentHelperTests/Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				184C150D272686A30018A00C /* PaymentHelper.podspec */,
 				184C14F4272680880018A00C /* PaymentHelper.h */,
+				182A53C7272FD30700621244 /* PaymentHandler.swift */,
 				184C14F5272680880018A00C /* PaymentHelper.docc */,
 			);
 			path = PaymentHelper;
@@ -108,7 +111,6 @@
 				9F7EFEFB16C4B9B6BDCC1E29 /* Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig */,
 				DECB865176AAFD336B62FED7 /* Pods-PaymentHelper-PaymentHelperTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -299,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				184C14F6272680880018A00C /* PaymentHelper.docc in Sources */,
+				182A53C8272FD30700621244 /* PaymentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F7EFEFB16C4B9B6BDCC1E29 /* Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -532,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DECB865176AAFD336B62FED7 /* Pods-PaymentHelper-PaymentHelperTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
