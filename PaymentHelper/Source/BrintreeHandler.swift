@@ -38,7 +38,7 @@ protocol BrainTreeProtocol {
 }
 
 public
-class BrainTreeHandler : NSObject{
+class BrainTreeHandler : NSObject {
     static var ReturnURL  : String  {
         let bundle = Bundle.main
         return bundle.bundleIdentifier ?? "comg.trioangle.gofer"
@@ -71,15 +71,12 @@ class BrainTreeHandler : NSObject{
 //MARK:- BrainTreeProtocol
 extension BrainTreeHandler : BrainTreeProtocol{
     
-    open
     func initalizeClient(with id : String){
-        
         self.clientToken = id
         self.client = BTAPIClient(authorization: id)
         BTAppContextSwitcher.setReturnURLScheme(BrainTreeHandler.ReturnURL)
     }
     
-    open
     func authenticatePaypalUsing(_ view: UIViewController,
                                   for amount: Double,
                                   currency: String,
@@ -105,7 +102,6 @@ extension BrainTreeHandler : BrainTreeProtocol{
         }
     }
     
-    open
     func authenticatePaymentUsing(_ view : UIViewController,
                                   for amount : Double,
                   result: @escaping BTResult) {
@@ -169,25 +165,20 @@ extension BrainTreeHandler : BrainTreeProtocol{
 }
 //MARK:- BTDropInViewControllerDelegate
 extension BrainTreeHandler : BTDropInControllerDelegate{
-    open
-    func reloadDropInData() {
-        
-    }
-    
-    open
+    func reloadDropInData() { }
+
     func editPaymentMethods(_ sender: Any) {
         
     }
     
-    open
-    func drop(_ viewController: BTDropInController, didSucceedWithTokenization paymentMethodNonce: BTPaymentMethodNonce) {
+    func drop(_ viewController: BTDropInController,
+              didSucceedWithTokenization paymentMethodNonce: BTPaymentMethodNonce) {
         viewController.presentedViewController?.dismiss(animated: true,
                                                         completion: nil)
         self.result?(.success(paymentMethodNonce))
         self.dismissPresentedView()
     }
     
-    open
     func drop(inViewControllerDidCancel viewController: BTDropInController) {
         viewController.presentedViewController?.dismiss(animated: true,
                                                         completion: nil)
@@ -207,7 +198,7 @@ extension BrainTreeHandler {
     }
     
     open
-    func dismissPresentedView(){
+    func dismissPresentedView() {
         self.hostView?.dismiss(animated: true,
                                completion: nil)
     }
@@ -215,17 +206,13 @@ extension BrainTreeHandler {
 
 extension BrainTreeHandler : BTViewControllerPresentingDelegate{
     
-    open
     func paymentDriver(_ driver: Any,
                        requestsPresentationOf viewController: UIViewController) {
         
     }
-    
-    open
+ 
     func paymentDriver(_ driver: Any,
                        requestsDismissalOf viewController: UIViewController) {
         
     }
-    
-    
 }
