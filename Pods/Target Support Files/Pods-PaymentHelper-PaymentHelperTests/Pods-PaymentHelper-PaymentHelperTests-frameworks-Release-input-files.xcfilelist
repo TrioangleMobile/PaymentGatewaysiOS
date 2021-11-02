@@ -1,5 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-PaymentHelper-PaymentHelperTests/Pods-PaymentHelper-PaymentHelperTests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework
-${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/Braintree/PayPalDataCollector/PPRiskMagnes.framework/PPRiskMagnes
-${PODS_XCFRAMEWORKS_BUILD_DIR}/Braintree/ThreeDSecure/CardinalMobile.framework/CardinalMobile
