@@ -1,3 +1,29 @@
-PODFILE CHECKSUM: 30fd300949c369edb9128b2b0fccd1209ee97218
+PODS:
+  - Stripe (21.9.0):
+    - Stripe/Stripe3DS2 (= 21.9.0)
+    - StripeCore (= 21.9.0)
+    - StripeUICore (= 21.9.0)
+  - Stripe/Stripe3DS2 (21.9.0):
+    - StripeCore (= 21.9.0)
+    - StripeUICore (= 21.9.0)
+  - StripeCore (21.9.0)
+  - StripeUICore (21.9.0):
+    - StripeCore (= 21.9.0)
+
+DEPENDENCIES:
+  - Stripe
+
+SPEC REPOS:
+  trunk:
+    - Stripe
+    - StripeCore
+    - StripeUICore
+
+SPEC CHECKSUMS:
+  Stripe: 41c3d261501e1dc84755b1bdabdaae50ebf92b53
+  StripeCore: 2ea9531e863ef20f191a0d61f00dedb7f061baef
+  StripeUICore: a0f9e40520823d34c63baec0782fc4a0c7fb7484
+
+PODFILE CHECKSUM: a89f7c3d457023fc2e15f93aa0dff58ad4d51b2b
 
 COCOAPODS: 1.11.2

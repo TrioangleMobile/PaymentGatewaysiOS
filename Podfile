@@ -6,7 +6,8 @@ target 'PaymentHelper' do
   use_frameworks!
 
   # Pods for PaymentHelper
-
+    pod 'Stripe'
+    
   target 'PaymentHelperTests' do
     # Pods for testing
   end
