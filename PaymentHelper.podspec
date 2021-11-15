@@ -135,5 +135,6 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
     spec.dependency 'Stripe'
-    # spec.dependency 'BraintreeDropIn'
+    spec.dependency 'Braintree'
+    spec.dependency 'BraintreeDropIn'
 end
