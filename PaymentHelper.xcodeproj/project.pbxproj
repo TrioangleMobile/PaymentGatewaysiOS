@@ -12,7 +12,7 @@
 		184C1501272680880018A00C /* PaymentHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184C1500272680880018A00C /* PaymentHelperTests.swift */; };
 		184C1502272680880018A00C /* PaymentHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 184C14F4272680880018A00C /* PaymentHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		184C150E272686A30018A00C /* PaymentHelper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 184C150D272686A30018A00C /* PaymentHelper.podspec */; };
-		18F4CB5C273003E100DC9CE7 /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4CB5A273003DF00DC9CE7 /* PaymentHandler.swift */; };
+		18F011BD27426BB100E82F33 /* StripeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F011BC27426BB100E82F33 /* StripeHandler.swift */; };
 		39DF7DE4032BE91796FA6F23 /* Pods_PaymentHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF0A0B4F154ADB42D3940B6A /* Pods_PaymentHelper.framework */; };
 		6D2609647D1E7D05A1658D15 /* Pods_PaymentHelper_PaymentHelperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E5F1ACF30D9720D8505403 /* Pods_PaymentHelper_PaymentHelperTests.framework */; };
 /* End PBXBuildFile section */
@@ -34,9 +34,9 @@
 		184C14FB272680880018A00C /* PaymentHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		184C1500272680880018A00C /* PaymentHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHelperTests.swift; sourceTree = "<group>"; };
 		184C150D272686A30018A00C /* PaymentHelper.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PaymentHelper.podspec; sourceTree = SOURCE_ROOT; };
+		18F011BC27426BB100E82F33 /* StripeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StripeHandler.swift; sourceTree = "<group>"; };
 		18F4CB48272FE46F00DC9CE7 /* Braintree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Braintree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F4CB4C272FE47600DC9CE7 /* BraintreeDropIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BraintreeDropIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18F4CB5A273003DF00DC9CE7 /* PaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
 		72A69C6D65FBC23A4531D49A /* Pods-PaymentHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentHelper.release.xcconfig"; path = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper.release.xcconfig"; sourceTree = "<group>"; };
 		8D11A31BDC79D256666BE086 /* Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig"; path = "Target Support Files/Pods-PaymentHelper-PaymentHelperTests/Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1E5F1ACF30D9720D8505403 /* Pods_PaymentHelper_PaymentHelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentHelper_PaymentHelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +108,7 @@
 		18F4CB59273003DF00DC9CE7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				18F4CB5A273003DF00DC9CE7 /* PaymentHandler.swift */,
+				18F011BC27426BB100E82F33 /* StripeHandler.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -318,7 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				184C14F6272680880018A00C /* PaymentHelper.docc in Sources */,
-				18F4CB5C273003E100DC9CE7 /* PaymentHandler.swift in Sources */,
+				18F011BD27426BB100E82F33 /* StripeHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
