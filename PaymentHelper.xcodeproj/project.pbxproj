@@ -14,6 +14,8 @@
 		184C150E272686A30018A00C /* PaymentHelper.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 184C150D272686A30018A00C /* PaymentHelper.podspec */; };
 		18F4CB5C273003E100DC9CE7 /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4CB5A273003DF00DC9CE7 /* PaymentHandler.swift */; };
 		18F4CB5E27300F5E00DC9CE7 /* BrintreeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4CB5B273003DF00DC9CE7 /* BrintreeHandler.swift */; };
+		6F5EDDFF942A8F6919AB0C7B /* Pods_PaymentHelper_PaymentHelperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DACCA77E7314D261EB732937 /* Pods_PaymentHelper_PaymentHelperTests.framework */; };
+		FD9085F5E4C31EAE3671A1CF /* Pods_PaymentHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27149445944DB7A457B57F0 /* Pods_PaymentHelper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,12 @@
 		18F4CB4C272FE47600DC9CE7 /* BraintreeDropIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BraintreeDropIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F4CB5A273003DF00DC9CE7 /* PaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
 		18F4CB5B273003DF00DC9CE7 /* BrintreeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrintreeHandler.swift; sourceTree = "<group>"; };
+		6E690D892E1508E4F88F898C /* Pods-PaymentHelper-PaymentHelperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentHelper-PaymentHelperTests.release.xcconfig"; path = "Target Support Files/Pods-PaymentHelper-PaymentHelperTests/Pods-PaymentHelper-PaymentHelperTests.release.xcconfig"; sourceTree = "<group>"; };
+		A27149445944DB7A457B57F0 /* Pods_PaymentHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACCA77E7314D261EB732937 /* Pods_PaymentHelper_PaymentHelperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PaymentHelper_PaymentHelperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65F6638D43EB6C2006AFBD0 /* Pods-PaymentHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentHelper.debug.xcconfig"; path = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper.debug.xcconfig"; sourceTree = "<group>"; };
+		F7710AE5764782572977A213 /* Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig"; path = "Target Support Files/Pods-PaymentHelper-PaymentHelperTests/Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF2BB214760CA9073D902DBB /* Pods-PaymentHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentHelper.release.xcconfig"; path = "Target Support Files/Pods-PaymentHelper/Pods-PaymentHelper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD9085F5E4C31EAE3671A1CF /* Pods_PaymentHelper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				184C14FC272680880018A00C /* PaymentHelper.framework in Frameworks */,
+				6F5EDDFF942A8F6919AB0C7B /* Pods_PaymentHelper_PaymentHelperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +119,10 @@
 		3221ADE6FDABC09C8076EA1B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				E65F6638D43EB6C2006AFBD0 /* Pods-PaymentHelper.debug.xcconfig */,
+				FF2BB214760CA9073D902DBB /* Pods-PaymentHelper.release.xcconfig */,
+				F7710AE5764782572977A213 /* Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig */,
+				6E690D892E1508E4F88F898C /* Pods-PaymentHelper-PaymentHelperTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -118,6 +132,8 @@
 			children = (
 				18F4CB4C272FE47600DC9CE7 /* BraintreeDropIn.framework */,
 				18F4CB48272FE46F00DC9CE7 /* Braintree.framework */,
+				A27149445944DB7A457B57F0 /* Pods_PaymentHelper.framework */,
+				DACCA77E7314D261EB732937 /* Pods_PaymentHelper_PaymentHelperTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +156,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 184C1505272680880018A00C /* Build configuration list for PBXNativeTarget "PaymentHelper" */;
 			buildPhases = (
+				3E75B33DED2BD2FE5BFBF05A /* [CP] Check Pods Manifest.lock */,
 				184C14EC272680880018A00C /* Headers */,
 				184C14ED272680880018A00C /* Sources */,
 				184C14EE272680880018A00C /* Frameworks */,
@@ -158,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 184C1508272680880018A00C /* Build configuration list for PBXNativeTarget "PaymentHelperTests" */;
 			buildPhases = (
+				19F2B2380DF37B5AE8E58AEA /* [CP] Check Pods Manifest.lock */,
 				184C14F7272680880018A00C /* Sources */,
 				184C14F8272680880018A00C /* Frameworks */,
 				184C14F9272680880018A00C /* Resources */,
+				2FE2BB466E1A97A04593B361 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +245,77 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19F2B2380DF37B5AE8E58AEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PaymentHelper-PaymentHelperTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FE2BB466E1A97A04593B361 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PaymentHelper-PaymentHelperTests/Pods-PaymentHelper-PaymentHelperTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Braintree/Braintree.framework",
+				"${BUILT_PRODUCTS_DIR}/BraintreeDropIn/BraintreeDropIn.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/Braintree/PayPalDataCollector/PPRiskMagnes.framework/PPRiskMagnes",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/Braintree/ThreeDSecure/CardinalMobile.framework/CardinalMobile",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Braintree.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BraintreeDropIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PPRiskMagnes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardinalMobile.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaymentHelper-PaymentHelperTests/Pods-PaymentHelper-PaymentHelperTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E75B33DED2BD2FE5BFBF05A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PaymentHelper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		184C14ED272680880018A00C /* Sources */ = {
@@ -388,6 +478,7 @@
 		};
 		184C1506272680880018A00C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E65F6638D43EB6C2006AFBD0 /* Pods-PaymentHelper.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -423,6 +514,7 @@
 		};
 		184C1507272680880018A00C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF2BB214760CA9073D902DBB /* Pods-PaymentHelper.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -458,6 +550,7 @@
 		};
 		184C1509272680880018A00C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7710AE5764782572977A213 /* Pods-PaymentHelper-PaymentHelperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,6 +572,7 @@
 		};
 		184C150A272680880018A00C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E690D892E1508E4F88F898C /* Pods-PaymentHelper-PaymentHelperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
