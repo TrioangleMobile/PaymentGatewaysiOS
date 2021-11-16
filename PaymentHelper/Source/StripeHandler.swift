@@ -9,7 +9,8 @@
 import Foundation
 import Stripe
 
-final class StripeHandler : NSObject {
+open
+class StripeHandler : NSObject {
     
     class public func initStripeModule(key: String) {
         STPAPIClient.shared.publishableKey = key
@@ -19,6 +20,7 @@ final class StripeHandler : NSObject {
     }
     let client = STPAPIClient.shared
     private let viewController : UIViewController
+    public
     init(_ viewController : UIViewController) {
         self.viewController = viewController
     }
@@ -82,6 +84,7 @@ final class StripeHandler : NSObject {
     }
 }
 extension StripeHandler : STPAuthenticationContext{
+    public
     func authenticationPresentingViewController() -> UIViewController {
         return self.viewController
     }

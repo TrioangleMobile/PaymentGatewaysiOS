@@ -23,6 +23,14 @@ extension BTErrors : LocalizedError {
     var errorDescription: String?{
         return self.localizedDescription
     }
+    var localizedDescription: String{
+        switch self {
+        case .clientNotInitialized:
+            return "Client Not Initialized"
+        case .clientCancelled:
+            return "Payment Cancelled"
+        }
+    }
 }
 
 public
@@ -31,8 +39,10 @@ protocol BrainTreeProtocol {
     func initalizeClient(with id : String)
     
     func authenticatePaymentUsing(_ view : UIViewController,
-                                  threeDSecureRequest : BTThreeDSecureRequest,
-                                  address : BTThreeDSecurePostalAddress,
+                                  email : String,
+                                  givenName : String,
+                                  surname : String,
+                                  phoneNumber : String,
                                   for amount : Double,
                                   result: @escaping BrainTreeHandler.BTResult)
     func authenticatePaypalUsing(_ view : UIViewController,
@@ -58,6 +68,8 @@ class BrainTreeHandler : NSObject {
     }
     public
     typealias BTResult = (Result<BTPaymentMethodNonce, Error>) -> Void
+    
+    public
     static var `default` : BrainTreeProtocol = {
         BrainTreeHandler()
     }()
@@ -109,10 +121,12 @@ extension BrainTreeHandler : BrainTreeProtocol{
     
     public
     func authenticatePaymentUsing(_ view : UIViewController,
-                                  threeDSecureRequest : BTThreeDSecureRequest,
-                                  address : BTThreeDSecurePostalAddress,
+                                  email : String,
+                                  givenName : String,
+                                  surname : String,
+                                  phoneNumber : String,
                                   for amount : Double,
-                                  result: @escaping BTResult) {
+                                  result: @escaping BrainTreeHandler.BTResult) {
         guard let currentClientToken = self.clientToken else{
             result(.failure(BTErrors.clientNotInitialized))
             return
@@ -122,19 +136,19 @@ extension BrainTreeHandler : BrainTreeProtocol{
         
         
         _ = BTDropInRequest()
-//        let threeDSecureRequest = BTThreeDSecureRequest()
-//        threeDSecureRequest.amount = NSDecimalNumber(value: amount)
-//        threeDSecureRequest.email = ""//UserDefaults.value(for: .user_email_id) ?? "test@email.com" as! String
-//        threeDSecureRequest.versionRequested = .version2
-//
-//        let address = BTThreeDSecurePostalAddress()
-//        address.givenName = ""// UserDefaults.value(for: .first_name) ?? "Albin" as! String // ASCII-printable characters required, else will throw a validation error
-//        address.surname = ""//UserDefaults.value(for: .last_name) ?? "MrngStar" as! String // ASCII-printable characters required, else will throw a validation error
-//        address.phoneNumber = ""//UserDefaults.value(for: .phonenumber) ?? "123456" as! String
-//
-//
-//        threeDSecureRequest.billingAddress = address
-//
+        let threeDSecureRequest = BTThreeDSecureRequest()
+        threeDSecureRequest.amount = NSDecimalNumber(value: amount)
+        threeDSecureRequest.email = email
+        threeDSecureRequest.versionRequested = .version2
+
+        let address = BTThreeDSecurePostalAddress()
+        address.givenName = givenName// ASCII-printable characters required, else will throw a validation error
+        address.surname = surname// ASCII-printable characters required, else will throw a validation error
+        address.phoneNumber = phoneNumber
+
+
+        threeDSecureRequest.billingAddress = address
+
 //        // Optional additional information.
 //        // For best results, provide as many of these elements as possible.
         
