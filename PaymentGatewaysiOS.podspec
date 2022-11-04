@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint PaymentHelper.podspec' to ensure this is a
+#  Be sure to run `pod spec lint PaymentGatewaysiOS.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -39,8 +39,8 @@ Xcode update for 14
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  # spec.license      = "MIT (example)"
-  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  spec.license      = "MIT (example)"
+  # spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -63,9 +63,9 @@ Xcode update for 14
   #  If this Pod runs only on iOS or OS X, then specify the platform and
   #  the deployment target. You can optionally include the target after the platform.
   #
-  spec.ios.deployment_target = "12.1"
-  spec.swift_version = "4.2"
- # spec.platform     = :ios
+  spec.ios.deployment_target = "13.0"
+  spec.swift_version = "5.0"
+  # spec.platform     = :ios
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
@@ -137,4 +137,5 @@ Xcode update for 14
     spec.dependency 'Stripe'
     spec.dependency 'Braintree'
     spec.dependency 'BraintreeDropIn'
+
 end
