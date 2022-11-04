@@ -63,8 +63,8 @@ Xcode update for 14
   #  If this Pod runs only on iOS or OS X, then specify the platform and
   #  the deployment target. You can optionally include the target after the platform.
   #
-  spec.ios.deployment_target = "12.1"
-  spec.swift_version = "4.2"
+  spec.ios.deployment_target = "14.0"
+  spec.swift_version = "5.0"
  # spec.platform     = :ios
   # spec.platform     = :ios, "5.0"
 
