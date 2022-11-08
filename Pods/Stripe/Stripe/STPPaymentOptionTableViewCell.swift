@@ -1,6 +1,6 @@
 //
 //  STPPaymentOptionTableViewCell.swift
-//  StripeiOS
+//  Stripe
 //
 //  Created by Ben Guo on 8/30/16.
 //  Copyright © 2016 Stripe, Inc. All rights reserved.
@@ -9,7 +9,6 @@
 import UIKit
 
 @_spi(STP) import StripeCore
-@_spi(STP) import StripePaymentsUI
 
 class STPPaymentOptionTableViewCell: UITableViewCell {
     @objc(configureForNewCardRowWithTheme:) func configureForNewCardRow(with theme: STPTheme) {
@@ -19,7 +18,7 @@ class STPPaymentOptionTableViewCell: UITableViewCell {
         backgroundColor = theme.secondaryBackgroundColor
 
         // Left icon
-        leftIcon.image = STPLegacyImageLibrary.addIcon()
+        leftIcon.image = STPImageLibrary.addIcon()
         leftIcon.tintColor = theme.accentColor
 
         // Title label
@@ -89,7 +88,7 @@ class STPPaymentOptionTableViewCell: UITableViewCell {
     private var theme: STPTheme = .defaultTheme
     private var leftIcon = UIImageView()
     private var titleLabel = UILabel()
-    private var checkmarkIcon = UIImageView(image: STPLegacyImageLibrary.checkmarkIcon())
+    private var checkmarkIcon = UIImageView(image: STPImageLibrary.checkmarkIcon())
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -166,7 +165,7 @@ class STPPaymentOptionTableViewCell: UITableViewCell {
                     selected: selected)
             }
         } else if paymentOption is STPApplePayPaymentOption {
-            let label = String.Localized.apple_pay
+            let label = STPLocalizedString("Apple Pay", "Text for Apple Pay payment method")
             let primaryColor = primaryColorForPaymentOption(withSelected: selected)
             return NSAttributedString(
                 string: label,

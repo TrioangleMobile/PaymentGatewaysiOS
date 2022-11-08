@@ -1,5 +1,5 @@
 //
-//  SectionContainerView.swift
+//  ContainerView.swift
 //  StripeUICore
 //
 //  Created by Yuki Tokuhiro on 6/4/21.
@@ -119,7 +119,7 @@ class SectionContainerView: UIView {
         if isUserInteractionEnabled || isDarkMode() {
             backgroundColor = theme.colors.background
         } else {
-            backgroundColor = .tertiarySystemGroupedBackground
+            backgroundColor = CompatibleColor.tertiarySystemGroupedBackground
         }
         
         guard let newViews = newViews, views != newViews else {

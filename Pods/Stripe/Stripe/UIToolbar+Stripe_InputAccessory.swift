@@ -1,6 +1,6 @@
 //
 //  UIToolbar+Stripe_InputAccessory.swift
-//  StripeiOS
+//  Stripe
 //
 //  Created by Jack Flintermann on 4/22/16.
 //  Copyright © 2016 Stripe, Inc. All rights reserved.

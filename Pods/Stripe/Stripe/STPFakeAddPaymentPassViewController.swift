@@ -1,6 +1,6 @@
 //
 //  STPFakeAddPaymentPassViewController.swift
-//  StripeiOS
+//  Stripe
 //
 //  Created by Jack Flintermann on 9/28/19.
 //  Copyright © 2019 Stripe, Inc. All rights reserved.

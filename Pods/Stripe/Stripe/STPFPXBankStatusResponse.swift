@@ -1,13 +1,12 @@
 //
 //  STPFPXBankStatusResponse.swift
-//  StripeiOS
+//  Stripe
 //
 //  Created by David Estes on 10/21/19.
 //  Copyright © 2019 Stripe, Inc. All rights reserved.
 //
 
 import Foundation
-@_spi(STP) import StripePayments
 
 class STPFPXBankStatusResponse: NSObject, STPAPIResponseDecodable {
     func bankBrandIsOnline(_ bankBrand: STPFPXBankBrand) -> Bool {
@@ -32,12 +31,12 @@ class STPFPXBankStatusResponse: NSObject, STPAPIResponseDecodable {
         guard let response = response else {
             return nil
         }
-        let dict = response.stp_dictionaryByRemovingNulls()
+        let dict = (response as NSDictionary).stp_dictionaryByRemovingNulls() as NSDictionary
 
         let statusResponse = self.init()
         statusResponse.bankList =
             dict.stp_dictionary(forKey: "parsed_bank_status") as? [String: NSNumber]
-        statusResponse.allResponseFields = dict
+        statusResponse.allResponseFields = dict as! [AnyHashable: Any]
 
         return statusResponse
     }

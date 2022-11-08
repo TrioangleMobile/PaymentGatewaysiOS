@@ -1,6 +1,6 @@
 //
 //  Token+API.swift
-//  StripeApplePay
+//  StripeiOS
 //
 //  Created by David Estes on 8/10/21.
 //  Copyright © 2021 Stripe, Inc. All rights reserved.
@@ -21,23 +21,20 @@ extension StripeAPI.Token {
     /// - Parameters:
     ///   - payment:     The user's encrypted payment information as returned from a PKPaymentAuthorizationController. Cannot be nil.
     ///   - completion:  The callback to run with the returned Stripe token (and any errors that may have occurred).
-    static func create(
-        apiClient: STPAPIClient = .shared,
-        payment: PKPayment,
-        completion: @escaping TokenCompletionBlock
-    ) {
+    static func create(apiClient: STPAPIClient = .shared,
+                       payment: PKPayment,
+                       completion: @escaping TokenCompletionBlock)
+    {
         let params = payment.stp_tokenParameters(apiClient: apiClient)
         create(
             apiClient: apiClient,
             parameters: params,
-            completion: completion
-        )
+            completion: completion)
     }
-
-    static func create(
-        apiClient: STPAPIClient = .shared,
-        parameters: [String: Any],
-        completion: @escaping TokenCompletionBlock
+    
+    static func create(apiClient: STPAPIClient = .shared,
+                       parameters: [String: Any],
+                       completion: @escaping TokenCompletionBlock
     ) {
         let tokenType = STPAnalyticsClient.tokenType(fromParameters: parameters)
         var mutableParams = parameters
@@ -47,11 +44,11 @@ extension StripeAPI.Token {
         apiClient.post(resource: Resource, parameters: mutableParams, completion: completion)
         STPTelemetryClient.shared.sendTelemetryData()
     }
-
+    
     static let Resource = "tokens"
 }
 
-extension PKPayment {
+@_spi(STP) public extension PKPayment {
     func stp_tokenParameters(apiClient: STPAPIClient) -> [String: Any] {
         let paymentString = String(data: self.token.paymentData, encoding: .utf8)
         var payload: [String: Any] = [:]
@@ -81,7 +78,7 @@ extension PKPayment {
         var transactionIdentifier = self.token.transactionIdentifier
         if transactionIdentifier != "" {
             if self.stp_isSimulated() {
-                transactionIdentifier = PKPayment.stp_testTransactionIdentifier()
+                transactionIdentifier = PKPayment.stp_testTransactionIdentifier() ?? ""
             }
             payload["pk_token_transaction_id"] = transactionIdentifier
         }

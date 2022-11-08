@@ -3,7 +3,6 @@
 //  StripeUICore
 //
 //  Created by Mel Ludowise on 10/1/21.
-//  Copyright © 2021 Stripe, Inc. All rights reserved.
 //
 
 import UIKit
@@ -132,7 +131,7 @@ final class PickerFieldView: UIView {
             if isUserInteractionEnabled {
                 textField.textColor = theme.colors.textFieldText
             } else {
-                textField.textColor = .tertiaryLabel
+                textField.textColor = CompatibleColor.tertiaryLabel
             }
             if frame.size != .zero {
                 textField.layoutIfNeeded() // Fixes an issue on iOS 15 where setting textField properties causes it to lay out from zero size.

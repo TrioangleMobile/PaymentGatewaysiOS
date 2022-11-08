@@ -1,6 +1,6 @@
 //
 //  STPSectionHeaderView.swift
-//  StripeiOS
+//  Stripe
 //
 //  Created by Ben Guo on 1/3/17.
 //  Copyright © 2017 Stripe, Inc. All rights reserved.

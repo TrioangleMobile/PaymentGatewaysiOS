@@ -30,31 +30,25 @@ PODS:
     - Braintree/ThreeDSecure (~> 5.5)
     - Braintree/UnionPay (~> 5.5)
     - Braintree/Venmo (~> 5.5)
-  - Stripe (23.1.1):
-    - StripeApplePay (= 23.1.1)
-    - StripeCore (= 23.1.1)
-    - StripePayments (= 23.1.1)
-    - StripePaymentsUI (= 23.1.1)
-    - StripeUICore (= 23.1.1)
-  - StripeApplePay (23.1.1):
-    - StripeCore (= 23.1.1)
-  - StripeCore (23.1.1)
-  - StripePayments (23.1.1):
-    - StripeCore (= 23.1.1)
-    - StripePayments/Stripe3DS2 (= 23.1.1)
-  - StripePayments/Stripe3DS2 (23.1.1):
-    - StripeCore (= 23.1.1)
-  - StripePaymentsUI (23.1.1):
-    - StripeCore (= 23.1.1)
-    - StripePayments (= 23.1.1)
-    - StripeUICore (= 23.1.1)
-  - StripeUICore (23.1.1):
-    - StripeCore (= 23.1.1)
+  - Stripe (22.8.4):
+    - Stripe/Stripe3DS2 (= 22.8.4)
+    - StripeApplePay (= 22.8.4)
+    - StripeCore (= 22.8.4)
+    - StripeUICore (= 22.8.4)
+  - Stripe/Stripe3DS2 (22.8.4):
+    - StripeApplePay (= 22.8.4)
+    - StripeCore (= 22.8.4)
+    - StripeUICore (= 22.8.4)
+  - StripeApplePay (22.8.4):
+    - StripeCore (= 22.8.4)
+  - StripeCore (22.8.4)
+  - StripeUICore (22.8.4):
+    - StripeCore (= 22.8.4)
 
 DEPENDENCIES:
   - Braintree
   - BraintreeDropIn
-  - Stripe
+  - Stripe (~> 22.8.1)
 
 SPEC REPOS:
   trunk:
@@ -63,20 +57,16 @@ SPEC REPOS:
     - Stripe
     - StripeApplePay
     - StripeCore
-    - StripePayments
-    - StripePaymentsUI
     - StripeUICore
 
 SPEC CHECKSUMS:
   Braintree: acd5dd18b4aff8858346d6b6f6f3b5bc059332fb
   BraintreeDropIn: ed7292064dca8738cfbb8445c6984f144328ffa9
-  Stripe: ff389e265eeffb891b871b62b2fa644e30e69338
-  StripeApplePay: 4413b4f21c0206094df20775aa5e8e063b9c8b5d
-  StripeCore: 6318dff8f7e42125c6e8b671ac54a6e82804705a
-  StripePayments: 7e903765860f1cc914041069edc9cf5e202f5ef7
-  StripePaymentsUI: e4b2be5b5b5edb774fc8667a71429194c39ce2a4
-  StripeUICore: 149ba9dda3f48dff829d2ebb2e3d455bc59dc0ed
+  Stripe: 59f6659e8ea413def19c97c57e23f5ec6ea48cf8
+  StripeApplePay: 6e9aebd3d248464836e9fbdaef6e5fb1817d56a6
+  StripeCore: 193f27552fb98108ebfe0df11651fe5f38948305
+  StripeUICore: 6a5bbea0164d63bd91000f001903e7901859e1a4
 
-PODFILE CHECKSUM: 96b320d5a8e267661d493fc6981b165c269f5277
+PODFILE CHECKSUM: ab5635a23fb944a48b4fe94c71426e424b7144b8
 
 COCOAPODS: 1.11.3

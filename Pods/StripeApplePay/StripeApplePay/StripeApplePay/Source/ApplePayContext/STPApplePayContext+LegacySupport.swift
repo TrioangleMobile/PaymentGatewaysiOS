@@ -3,7 +3,6 @@
 //  StripeApplePay
 //
 //  Created by David Estes on 1/25/22.
-//  Copyright © 2022 Stripe, Inc. All rights reserved.
 //
 
 import Foundation
@@ -18,13 +17,11 @@ import PassKit
     @_spi(STP) public var paymentInformation: PKPayment
     @_spi(STP) public var completion: STPIntentClientSecretCompletionBlock
 
-    @_spi(STP) public init(
-        delegate: _stpinternal_STPApplePayContextDelegateBase,
-        context: STPApplePayContext,
-        paymentMethod: StripeAPI.PaymentMethod,
-        paymentInformation: PKPayment,
-        completion: @escaping STPIntentClientSecretCompletionBlock
-    ) {
+    @_spi(STP) public init(delegate: _stpinternal_STPApplePayContextDelegateBase,
+         context: STPApplePayContext,
+         paymentMethod: StripeAPI.PaymentMethod,
+         paymentInformation: PKPayment,
+         completion: @escaping STPIntentClientSecretCompletionBlock) {
         self.delegate = delegate
         self.context = context
         self.paymentMethod = paymentMethod
@@ -41,12 +38,10 @@ import PassKit
     @_spi(STP) public var status: STPApplePayContext.PaymentStatus
     @_spi(STP) public var error: Error?
 
-    @_spi(STP) public init(
-        delegate: _stpinternal_STPApplePayContextDelegateBase,
-        context: STPApplePayContext,
-        status: STPApplePayContext.PaymentStatus,
-        error: Error?
-    ) {
+    @_spi(STP) public init(delegate: _stpinternal_STPApplePayContextDelegateBase,
+         context: STPApplePayContext,
+         status: STPApplePayContext.PaymentStatus,
+         error: Error?) {
         self.delegate = delegate
         self.context = context
         self.status = status

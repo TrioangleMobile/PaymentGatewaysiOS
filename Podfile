@@ -6,7 +6,7 @@ target 'PaymentHelper' do
   use_frameworks!
 
   # Pods for PaymentHelper
-    pod 'Stripe'
+    pod 'Stripe','~> 22.8.1'
     pod 'Braintree'
     pod 'BraintreeDropIn'
     
