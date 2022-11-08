@@ -1,24 +1,109 @@
-/* The label of a text field that is optional. For example, 'Email (optional)' or 'Name (optional) */
 "%@ (optional)" = "%@(opsyonal)";
 
-/* Address line 1 placeholder for billing address form. */
+"Account number" = "Numero ng account";
+
+"Address" = "Adres";
+
 "Address line 1" = "Unang linya ng adres";
 
-/* Label for input requesting address line 2, used for international addresses */
 "Address line 2" = "Linya 2 ng address";
 
-/* Country selector and postal code entry form header title */
+"Area" = "Lugar";
+
+"BSB number" = "Numero ng BSB";
+
+"Billing address is same as shipping" = "Ang address sa billing ay kapareho ng sa pagpapadala";
+
+"Cancel" = "Kanselahin";
+
+"City" = "Siyudad";
+
+"Company" = "Kompanya";
+
+"Continue" = "Magpatuloy";
+
+"Country" = "Bansa";
+
 "Country or region" = "Bansa o rehiyon";
 
-/* Done button title */
+"County" = "County";
+
+"Department" = "Departamento";
+
+"District" = "Distrito";
+
+"Do Si" = "Do Si";
+
 "Done" = "Tapos Na";
 
-/* Caption for Email field on address form */
+"Edit" = "I-edit";
+
+"Eircode" = "Eircode";
+
 "Email" = "Email";
 
-/* Caption for Name field on address form */
+"Emirate" = "Emirate";
+
+"Error" = "Error";
+
+"First" = "Pangalan";
+
+"Full name" = "Buong pangalan";
+
+"Incomplete phone number" = "Kulang na numero ng telepono";
+
+"Island" = "Isla";
+
+"Last" = "Apelyido";
+
 "Name" = "Pangalan";
 
-/* Error message when email is invalid */
+"Name on account" = "Pangalan sa account";
+
+"OK" = "OK";
+
+"Oblast" = "Oblast";
+
+"Other" = "Iba Pa";
+
+"Parish" = "Parokya";
+
+"Phone" = "Telepono";
+
+"Postal code" = "Postal code";
+
+"Prefecture" = "Prefecture";
+
+"Province" = "Probinsiya";
+
+"Remove" = "Alisin";
+
+"Remove bank account" = "Alisin ang account sa bangko";
+
+"Remove bank account ending in %@" = "Alisin ang account sa bangko na nagtatapos sa %@";
+
+"State" = "State";
+
+"Suburb" = "Suburb";
+
+"Suburb or city" = "Suburb o lungsod";
+
+"The BSB you entered is incomplete." = "Ang BSB na ipinasok mo ay di kumpleto.";
+
+"The ID number you entered is incomplete." = "Ang numero ng ID na inilagay mo ay kulang.";
+
+"The account number you entered is incomplete." = "Ang numero ng account na inilagay mo ay kulang.";
+
+"Town or city" = "Bayan o siyudad";
+
+"Unable to parse phone number" = "Hindi ma=parse ang numero ng telepono";
+
+"Use rotor to access links" = "Gumamit ng rotor para i-access ang mga link";
+
+"Your ZIP is incomplete." = "Ang iyong ZIP ay di kumpleto.";
+
 "Your email is invalid." = "Ang iyong email ay imbalido.";
 
+"Your postal code is incomplete." = "Ang iyong postal code ay di kumpleto.";
+
+"ZIP" = "ZIP";

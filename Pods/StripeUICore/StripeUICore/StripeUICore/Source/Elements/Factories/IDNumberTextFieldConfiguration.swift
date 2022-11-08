@@ -3,6 +3,7 @@
 //  StripeUICore
 //
 //  Created by Mel Ludowise on 9/27/21.
+//  Copyright © 2021 Stripe, Inc. All rights reserved.
 //
 
 import Foundation
@@ -42,7 +43,7 @@ import Foundation
         }
     }
 
-    public var maxLength: Int {
+    public func maxLength(for text: String) -> Int {
         switch type {
         case .BR_CPF:
             return 11
@@ -85,7 +86,7 @@ import Foundation
              .none:
             return .valid
         default:
-            return maxLength == text.count ? .valid : .invalid(
+            return maxLength(for: text) == text.count ? .valid : .invalid(
                 TextFieldElement.Error.incomplete(
                     localizedDescription: STPLocalizedString(
                         "The ID number you entered is incomplete.",

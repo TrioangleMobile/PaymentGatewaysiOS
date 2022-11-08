@@ -1,24 +1,109 @@
-/* The label of a text field that is optional. For example, 'Email (optional)' or 'Name (optional) */
 "%@ (optional)" = "%@ (pasirenkamas)";
 
-/* Address line 1 placeholder for billing address form. */
+"Account number" = "Sąskaitos numeris";
+
+"Address" = "Adresas";
+
 "Address line 1" = "1 adreso eilutė";
 
-/* Label for input requesting address line 2, used for international addresses */
 "Address line 2" = "2 adreso eilutė";
 
-/* Country selector and postal code entry form header title */
+"Area" = "Sritis";
+
+"BSB number" = "BSB numeris";
+
+"Billing address is same as shipping" = "Atsiskaitymo ir siuntimo adresai vienodi";
+
+"Cancel" = "Atšaukti";
+
+"City" = "Miestas";
+
+"Company" = "Bendrovė";
+
+"Continue" = "Tęsti";
+
+"Country" = "Šalis";
+
 "Country or region" = "Šalis arba regionas";
 
-/* Done button title */
+"County" = "Apygarda";
+
+"Department" = "Skyrius";
+
+"District" = "Rajonas";
+
+"Do Si" = "Do Si";
+
 "Done" = "Atlikta";
 
-/* Caption for Email field on address form */
+"Edit" = "Redaguoti";
+
+"Eircode" = "Pašto kodas (EIR)";
+
 "Email" = "El. paštas";
 
-/* Caption for Name field on address form */
+"Emirate" = "Emyratas";
+
+"Error" = "Klaida";
+
+"First" = "Vardas";
+
+"Full name" = "Vardas, pavardė";
+
+"Incomplete phone number" = "Ne visas telefono numeris";
+
+"Island" = "Sala";
+
+"Last" = "Pavardė";
+
 "Name" = "Vardas, pavardė";
 
-/* Error message when email is invalid */
+"Name on account" = "Sąskaitos turėtojo vardas ir pavardė";
+
+"OK" = "GERAI";
+
+"Oblast" = "Sritis";
+
+"Other" = "Kita";
+
+"Parish" = "Parapija";
+
+"Phone" = "Telefonas";
+
+"Postal code" = "Pašto kodas";
+
+"Prefecture" = "Prefektūra";
+
+"Province" = "Provincija";
+
+"Remove" = "Pašalinti";
+
+"Remove bank account" = "Pašalinti banko sąskaitą";
+
+"Remove bank account ending in %@" = "Pašalinti banko sąskaitą, kurios paskutiniai skaičiai %@";
+
+"State" = "Valstija";
+
+"Suburb" = "Priemiestis";
+
+"Suburb or city" = "Priemiestis arba miestas";
+
+"The BSB you entered is incomplete." = "Įvestas neišsamus BSB numeris.";
+
+"The ID number you entered is incomplete." = "Įvedėte ne visą identifikacinį numerį.";
+
+"The account number you entered is incomplete." = "Įvedėte ne visą sąskaitos numerį.";
+
+"Town or city" = "Miestelis arba miestas";
+
+"Unable to parse phone number" = "Nepavyko išanalizuoti telefono numerio";
+
+"Use rotor to access links" = "Naudoti pasukimo ratuką prieigai prie saitų";
+
+"Your ZIP is incomplete." = "Neišsamus jūsų pašto kodas.";
+
 "Your email is invalid." = "Jūsų el. paštas yra neteisingas.";
 
+"Your postal code is incomplete." = "Pašto kodas neišsamus.";
+
+"ZIP" = "Pašto kodas";

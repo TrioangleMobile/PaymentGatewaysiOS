@@ -1,6 +1,6 @@
 //
 //  STPEphemeralKeyManager.swift
-//  Stripe
+//  StripeiOS
 //
 //  Created by Ben Guo on 5/9/17.
 //  Copyright © 2017 Stripe, Inc. All rights reserved.
@@ -139,17 +139,17 @@ class STPEphemeralKeyManager: NSObject, STPEphemeralKeyManagerProtocol {
                         if self.keyProvider is STPCustomerEphemeralKeyProvider {
                             assert(
                                 false,
-                                "Could not parse the ephemeral key response following protocol STPCustomerEphemeralKeyProvider. Make sure your backend is sending the unmodified JSON of the ephemeral key to your app. For more info, see https://stripe.com/docs/mobile/ios/standard#prepare-your-api"
+                                "Could not parse the ephemeral key response following protocol STPCustomerEphemeralKeyProvider. Make sure your backend is sending the unmodified JSON of the ephemeral key to your app. For more info, see https://stripe.com/docs/mobile/ios/basic#prepare-your-api"
                             )
                         } else if self.keyProvider is STPIssuingCardEphemeralKeyProvider {
                             assert(
                                 false,
-                                "Could not parse the ephemeral key response following protocol STPIssuingCardEphemeralKeyProvider. Make sure your backend is sending the unmodified JSON of the ephemeral key to your app. For more info, see https://stripe.com/docs/mobile/ios/standard#prepare-your-api"
+                                "Could not parse the ephemeral key response following protocol STPIssuingCardEphemeralKeyProvider. Make sure your backend is sending the unmodified JSON of the ephemeral key to your app. For more info, see https://stripe.com/docs/mobile/ios/basic#prepare-your-api"
                             )
                         }
                         assert(
                             false,
-                            "Could not parse the ephemeral key response. Make sure your backend is sending the unmodified JSON of the ephemeral key to your app. For more info, see https://stripe.com/docs/mobile/ios/standard#prepare-your-api"
+                            "Could not parse the ephemeral key response. Make sure your backend is sending the unmodified JSON of the ephemeral key to your app. For more info, see https://stripe.com/docs/mobile/ios/basic#prepare-your-api"
                         )
                     }
                 }

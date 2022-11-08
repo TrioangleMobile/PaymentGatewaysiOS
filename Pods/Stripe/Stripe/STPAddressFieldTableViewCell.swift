@@ -1,6 +1,6 @@
 //
 //  STPAddressFieldTableViewCell.swift
-//  Stripe
+//  StripeiOS
 //
 //  Created by Ben Guo on 4/13/16.
 //  Copyright © 2016 Stripe, Inc. All rights reserved.
@@ -9,6 +9,7 @@
 import UIKit
 @_spi(STP) import StripeCore
 @_spi(STP) import StripeUICore
+@_spi(STP) import StripePaymentsUI
 
 enum STPAddressFieldType: Int {
     case name
@@ -410,7 +411,7 @@ class STPAddressFieldTableViewCell: UITableViewCell, UITextFieldDelegate, UIPick
 
     var potentiallyValidContents: Bool {
         switch self.type {
-        case .name, .line1, .city, .state, .country, .line2:
+        case .name, .line1, .city, .state, .country, .line2, .phone:
             return true
         case .zip:
             let validationState = STPPostalCodeValidator.validationState(
@@ -418,9 +419,6 @@ class STPAddressFieldTableViewCell: UITableViewCell, UITextFieldDelegate, UIPick
             return validationState == .valid || validationState == .incomplete
         case .email:
             return STPEmailAddressValidator.stringIsValidPartialEmailAddress(self.contents)
-        case .phone:
-            return STPPhoneNumberValidator.stringIsValidPartialPhoneNumber(
-                self.contents ?? "", forCountryCode: self.ourCountryCode)
         }
     }
 

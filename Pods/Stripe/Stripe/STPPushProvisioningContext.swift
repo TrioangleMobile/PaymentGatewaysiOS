@@ -1,6 +1,6 @@
 //
 //  STPPushProvisioningContext.swift
-//  Stripe
+//  StripeiOS
 //
 //  Created by Jack Flintermann on 9/27/18.
 //  Copyright © 2018 Stripe, Inc. All rights reserved.
@@ -15,19 +15,26 @@ public class STPPushProvisioningContext: NSObject {
     /// The API Client to use to make requests.
     /// Defaults to STPAPIClient.shared
     public var apiClient: STPAPIClient = .shared
-    
-    /// The STPAPIClient instance to use to make API requests to Stripe.
-    /// Defaults to `STPAPIClient.shared`.
-    @available(swift, deprecated: 0.0.1, renamed: "apiClient")
-    @objc(apiClient) public var _objc_apiClient: _stpobjc_STPAPIClient {
-        get {
-            _stpobjc_STPAPIClient(apiClient: apiClient)
-        }
-        set {
-            apiClient = newValue._apiClient
-        }
-    }
 
+    /// This is a helper method to generate a PKAddPaymentPassRequestConfiguration that will work with
+    /// Stripe's Issuing APIs. Pass the returned configuration object to `PKAddPaymentPassViewController`'s `initWithRequestConfiguration:delegate:` initializer.
+    /// @deprecated Use requestConfiguration(withName:description:last4:brand:primaryAccountIdentifier:) instead.
+    /// - Parameters:
+    ///   - name: Your cardholder's name. Example: John Appleseed
+    ///   - description: A localized description of your card's name. This will appear in Apple's UI as "{description} will be available in Wallet". Example: Platinum Rewards Card
+    ///   - last4: The last 4 of the card to be added to the user's Apple Pay wallet. Example: 4242
+    ///   - brand: The brand of the card. Example: `STPCardBrandVisa`
+    @objc
+    @available(*, deprecated, message: "Use `requestConfiguration(withName:description:last4:brand:primaryAccountIdentifier:)` instead.", renamed: "requestConfiguration(withName:description:last4:brand:primaryAccountIdentifier:)")
+    public class func requestConfiguration(
+        withName name: String,
+        description: String?,
+        last4: String?,
+        brand: STPCardBrand
+    ) -> PKAddPaymentPassRequestConfiguration {
+        return self.requestConfiguration(withName: name, description: description, last4: last4, brand: brand, primaryAccountIdentifier: nil)
+    }
+    
     /// This is a helper method to generate a PKAddPaymentPassRequestConfiguration that will work with
     /// Stripe's Issuing APIs. Pass the returned configuration object to `PKAddPaymentPassViewController`'s `initWithRequestConfiguration:delegate:` initializer.
     /// - Parameters:
@@ -35,26 +42,27 @@ public class STPPushProvisioningContext: NSObject {
     ///   - description: A localized description of your card's name. This will appear in Apple's UI as "{description} will be available in Wallet". Example: Platinum Rewards Card
     ///   - last4: The last 4 of the card to be added to the user's Apple Pay wallet. Example: 4242
     ///   - brand: The brand of the card. Example: `STPCardBrandVisa`
+    ///   - primaryAccountIdentifier: The `primary_account_identifier` value from the issued card.
     @objc
     public class func requestConfiguration(
         withName name: String,
         description: String?,
         last4: String?,
-        brand: STPCardBrand
+        brand: STPCardBrand,
+        primaryAccountIdentifier: String?
     ) -> PKAddPaymentPassRequestConfiguration {
         let config = PKAddPaymentPassRequestConfiguration(encryptionScheme: .ECC_V2)
         config?.cardholderName = name
         config?.primaryAccountSuffix = last4
         config?.localizedDescription = description
-        if #available(iOS 12.0, *) {
-            config?.style = .payment
-        }
+        config?.style = .payment
         if brand == .visa {
             config?.paymentNetwork = .visa
         }
         if brand == .mastercard {
             config?.paymentNetwork = .masterCard
         }
+        config?.primaryAccountIdentifier = primaryAccountIdentifier
         return config!
     }
 

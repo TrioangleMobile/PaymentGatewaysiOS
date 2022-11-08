@@ -1,12 +1,13 @@
 //
 //  STPPromise.swift
-//  Stripe
+//  StripeiOS
 //
 //  Created by Jack Flintermann on 4/20/16.
 //  Copyright © 2016 Stripe, Inc. All rights reserved.
 //
 
 import Foundation
+@_spi(STP) import StripeCore
 
 class STPPromise<T>: NSObject {
     typealias STPPromiseErrorBlock = (Error) -> Void

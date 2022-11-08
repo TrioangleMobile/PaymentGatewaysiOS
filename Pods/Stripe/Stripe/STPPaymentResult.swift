@@ -1,6 +1,6 @@
 //
 //  STPPaymentResult.swift
-//  Stripe
+//  StripeiOS
 //
 //  Created by Jack Flintermann on 1/15/16.
 //  Copyright © 2016 Stripe, Inc. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 
 /// When you're using `STPPaymentContext` to request your user's payment details, this is the object that will be returned to your application when they've successfully made a payment.
-/// See https://stripe.com/docs/mobile/ios/standard#submit-payment-intents.
+/// See https://stripe.com/docs/mobile/ios/basic#submit-payment-intents
 public class STPPaymentResult: NSObject {
     /// The payment method that the user has selected. This may come from a variety of different payment methods, such as an Apple Pay payment or a stored credit card. - seealso: STPPaymentMethod.h
     /// If paymentMethod is nil, paymentMethodParams will be populated instead.

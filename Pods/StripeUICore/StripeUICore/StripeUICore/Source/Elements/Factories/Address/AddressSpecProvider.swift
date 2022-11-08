@@ -7,20 +7,22 @@
 //
 
 import Foundation
+@_spi(STP) import StripeCore
 
-// This file was adapted from stripe-js-v3's checkoutSupportedCountries.js
+// This file was adapted from https://git.corp.stripe.com/stripe-internal/stripe-js-v3/blob/bdc2eeed/src/elements/inner/shared/address/addressData.ts
 let addressDataFilename = "localized_address_data"
 
 @_spi(STP) public class AddressSpecProvider {
     @_spi(STP) public static var shared: AddressSpecProvider = AddressSpecProvider()
     var addressSpecs: [String: AddressSpec] = [:]
-    var countries: [String] {
+    public var countries: [String] {
         return addressSpecs.map { $0.key }
     }
     private lazy var addressSpecsUpdateQueue: DispatchQueue = {
         DispatchQueue(label: addressDataFilename, qos: .userInitiated)
     }()
-    
+
+    /// Loads address specs with a completion block
     public func loadAddressSpecs(completion: (() -> Void)? = nil) {
         addressSpecsUpdateQueue.async {
             let bundle = StripeUICoreBundleLocator.resourcesBundle
@@ -36,6 +38,15 @@ let addressDataFilename = "localized_address_data"
             self.addressSpecs = addressSpecs
             completion?()
         }
+    }
+
+    /// Loads address specs with a promise
+    public func loadAddressSpecs() -> Promise<Void> {
+        let promise = Promise<Void>()
+        loadAddressSpecs {
+            promise.resolve(with: ())
+        }
+        return promise
     }
     
     func addressSpec(for country: String) -> AddressSpec {

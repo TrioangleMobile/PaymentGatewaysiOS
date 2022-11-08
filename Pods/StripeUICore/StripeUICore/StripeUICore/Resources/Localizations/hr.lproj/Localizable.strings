@@ -1,24 +1,109 @@
-/* The label of a text field that is optional. For example, 'Email (optional)' or 'Name (optional) */
 "%@ (optional)" = "%@ (neobavezno)";
 
-/* Address line 1 placeholder for billing address form. */
+"Account number" = "Broj računa";
+
+"Address" = "Adresa";
+
 "Address line 1" = "Ulica i kućni broj 1";
 
-/* Label for input requesting address line 2, used for international addresses */
 "Address line 2" = "Broj stana, kat ili poštanski pretinac";
 
-/* Country selector and postal code entry form header title */
+"Area" = "Područje";
+
+"BSB number" = "BSB broj";
+
+"Billing address is same as shipping" = "Adresa računa jednaka je adresi dostave";
+
+"Cancel" = "Otkaži";
+
+"City" = "Grad";
+
+"Company" = "Poduzeće";
+
+"Continue" = "Nastavi";
+
+"Country" = "Zemlja";
+
 "Country or region" = "Zemlja ili regija";
 
-/* Done button title */
+"County" = "Grofovija";
+
+"Department" = "Administrativna jedinica";
+
+"District" = "Okrug";
+
+"Do Si" = "Do Si";
+
 "Done" = "Gotovo";
 
-/* Caption for Email field on address form */
+"Edit" = "Uredi";
+
+"Eircode" = "Eircode";
+
 "Email" = "E-mail";
 
-/* Caption for Name field on address form */
+"Emirate" = "Emirat";
+
+"Error" = "Greška";
+
+"First" = "Ime";
+
+"Full name" = "Puno ime";
+
+"Incomplete phone number" = "Nepotpuni telefonski broj";
+
+"Island" = "Otok";
+
+"Last" = "Prezime";
+
 "Name" = "Ime";
 
-/* Error message when email is invalid */
+"Name on account" = "Ime na računu";
+
+"OK" = "U redu";
+
+"Oblast" = "Oblast";
+
+"Other" = "Ostalo";
+
+"Parish" = "Župa";
+
+"Phone" = "Telefon";
+
+"Postal code" = "Poštanski broj";
+
+"Prefecture" = "Prefektura";
+
+"Province" = "Provincija";
+
+"Remove" = "Ukloni";
+
+"Remove bank account" = "Ukloni bankovni račun";
+
+"Remove bank account ending in %@" = "Ukloni bankovni račun koji završava na %@";
+
+"State" = "Država";
+
+"Suburb" = "Predgrađe";
+
+"Suburb or city" = "Predgrađe ili grad";
+
+"The BSB you entered is incomplete." = "Uneseni BSB nije kompletan.";
+
+"The ID number you entered is incomplete." = "Uneseni identifikacijski broj nije potpun.";
+
+"The account number you entered is incomplete." = "Uneseni broj računa je nepotpun.";
+
+"Town or city" = "Gradić ili grad";
+
+"Unable to parse phone number" = "Broj telefona nije moguće pročitati";
+
+"Use rotor to access links" = "Upotrijebite rotor za pristup poveznicama";
+
+"Your ZIP is incomplete." = "Vaš ZIP broj nije kompletan.";
+
 "Your email is invalid." = "Vaš e-mail je neispravan.";
 
+"Your postal code is incomplete." = "Vaš poštanski broj nije kompletan.";
+
+"ZIP" = "ZIP";

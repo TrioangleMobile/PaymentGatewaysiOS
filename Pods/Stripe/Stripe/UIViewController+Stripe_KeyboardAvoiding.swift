@@ -1,6 +1,6 @@
 //
 //  UIViewController+Stripe_KeyboardAvoiding.swift
-//  Stripe
+//  StripeiOS
 //
 //  Created by Jack Flintermann on 4/15/16.
 //  Copyright © 2016 Stripe, Inc. All rights reserved.
@@ -123,9 +123,7 @@ class STPKeyboardDetectingViewController: UIViewController {
             var contentInsets = scrollView.contentInset
             var scrollIndicatorInsets: UIEdgeInsets = .zero
             #if !TARGET_OS_MACCATALYST
-                if #available(iOS 11.1, *) {
-                    scrollIndicatorInsets = scrollView.verticalScrollIndicatorInsets
-                }
+                scrollIndicatorInsets = scrollView.verticalScrollIndicatorInsets
             #else
                 scrollIndicatorInsets = scrollView.scrollIndicatorInsets
             #endif

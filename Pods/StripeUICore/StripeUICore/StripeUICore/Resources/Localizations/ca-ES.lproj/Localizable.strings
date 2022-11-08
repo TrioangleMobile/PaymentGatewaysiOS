@@ -1,24 +1,109 @@
-/* The label of a text field that is optional. For example, 'Email (optional)' or 'Name (optional) */
 "%@ (optional)" = "%@ (opcional)";
 
-/* Address line 1 placeholder for billing address form. */
+"Account number" = "Número de Compte";
+
+"Address" = "Adreça";
+
 "Address line 1" = "Línia de l'adreça 1";
 
-/* Label for input requesting address line 2, used for international addresses */
 "Address line 2" = "Línia de l'adreça 2";
 
-/* Country selector and postal code entry form header title */
+"Area" = "Àrea";
+
+"BSB number" = "Número BSB";
+
+"Billing address is same as shipping" = "L'adreça de facturació és la mateixa que la d'enviament";
+
+"Cancel" = "Cancel·la";
+
+"City" = "Ciutat";
+
+"Company" = "Empresa";
+
+"Continue" = "Continua";
+
+"Country" = "País";
+
 "Country or region" = "País o regió";
 
-/* Done button title */
+"County" = "Comtat";
+
+"Department" = "Departament";
+
+"District" = "Districte";
+
+"Do Si" = "Do Si";
+
 "Done" = "Fet";
 
-/* Caption for Email field on address form */
+"Edit" = "Editar";
+
+"Eircode" = "Eircode";
+
 "Email" = "Correu electrònic";
 
-/* Caption for Name field on address form */
+"Emirate" = "Emirat";
+
+"Error" = "Error";
+
+"First" = "Nom";
+
+"Full name" = "Nom complet";
+
+"Incomplete phone number" = "Número de telèfon incomplet";
+
+"Island" = "Illa";
+
+"Last" = "Cognom";
+
 "Name" = "Nom";
 
-/* Error message when email is invalid */
+"Name on account" = "Nom al compte";
+
+"OK" = "D'acord";
+
+"Oblast" = "Óblast";
+
+"Other" = "Un altre";
+
+"Parish" = "Parròquia";
+
+"Phone" = "Telèfon";
+
+"Postal code" = "Codi postal";
+
+"Prefecture" = "Prefectura";
+
+"Province" = "Província";
+
+"Remove" = "Eliminar";
+
+"Remove bank account" = "Elimina el compte bancari";
+
+"Remove bank account ending in %@" = "Elimina el compte bancari que acaba en %@";
+
+"State" = "País";
+
+"Suburb" = "Suburbi";
+
+"Suburb or city" = "Suburbi o ciutat";
+
+"The BSB you entered is incomplete." = "El BSB que has introduït és incomplet.";
+
+"The ID number you entered is incomplete." = "El número d'identificació que has introduït és incomplet.";
+
+"The account number you entered is incomplete." = "El número de compte que heu introduït és incomplet.";
+
+"Town or city" = "Municipi o ciutat";
+
+"Unable to parse phone number" = "No s'ha pogut analitzar el número de telèfon";
+
+"Use rotor to access links" = "Empreu el rotor per accedir als enllaços";
+
+"Your ZIP is incomplete." = "El teu ZIP no està complet.";
+
 "Your email is invalid." = "L'adreça electrònica no és vàlida.";
 
+"Your postal code is incomplete." = "El teu codi postal no està complet.";
+
+"ZIP" = "ZIP";

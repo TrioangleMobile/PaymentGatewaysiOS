@@ -1,24 +1,109 @@
-/* The label of a text field that is optional. For example, 'Email (optional)' or 'Name (optional) */
 "%@ (optional)" = "%@ (opsyenal)";
 
-/* Address line 1 placeholder for billing address form. */
+"Account number" = "Nombor akaun";
+
+"Address" = "Alamat";
+
 "Address line 1" = "Alamat baris 1";
 
-/* Label for input requesting address line 2, used for international addresses */
 "Address line 2" = "Alamat baris 2";
 
-/* Country selector and postal code entry form header title */
+"Area" = "Kawasan";
+
+"BSB number" = "Nombor BSB";
+
+"Billing address is same as shipping" = "Alamat pengebilan sama dengan alamat penghantaran";
+
+"Cancel" = "Batalkan";
+
+"City" = "Bandar";
+
+"Company" = "Syarikat";
+
+"Continue" = "Teruskan";
+
+"Country" = "Negara";
+
 "Country or region" = "Negara atau rantau";
 
-/* Done button title */
+"County" = "Kaunti";
+
+"Department" = "Jabatan";
+
+"District" = "Daerah";
+
+"Do Si" = "Do Si";
+
 "Done" = "Selesai";
 
-/* Caption for Email field on address form */
+"Edit" = "Edit";
+
+"Eircode" = "Eircode";
+
 "Email" = "E-mel";
 
-/* Caption for Name field on address form */
+"Emirate" = "Amiriah";
+
+"Error" = "Ralat";
+
+"First" = "Pertama";
+
+"Full name" = "Nama penuh";
+
+"Incomplete phone number" = "Nombor telefon tidak lengkap";
+
+"Island" = "Pulau";
+
+"Last" = "Akhir";
+
 "Name" = "Nama";
 
-/* Error message when email is invalid */
+"Name on account" = "Nama pada akaun";
+
+"OK" = "OK";
+
+"Oblast" = "Oblast";
+
+"Other" = "Lain-lain";
+
+"Parish" = "Kariah";
+
+"Phone" = "Telefon";
+
+"Postal code" = "Poskod";
+
+"Prefecture" = "Wilayah";
+
+"Province" = "Wilayah";
+
+"Remove" = "Alih Keluar";
+
+"Remove bank account" = "Alih keluar akaun bank";
+
+"Remove bank account ending in %@" = "Alih keluar akaun bank yang berakhir dengan %@";
+
+"State" = "Negeri";
+
+"Suburb" = "Pinggir Bandar";
+
+"Suburb or city" = "Pinggir bandar atau bandar";
+
+"The BSB you entered is incomplete." = "BSB yang anda masukkan tidak lengkap.";
+
+"The ID number you entered is incomplete." = "Nombor ID yang anda masukkan tidak lengkap.";
+
+"The account number you entered is incomplete." = "Nombor akaun yang anda masukkan tidak lengkap.";
+
+"Town or city" = "Pekan atau bandar";
+
+"Unable to parse phone number" = "Nombor telefon tidak dapat dihuraikan";
+
+"Use rotor to access links" = "Gunakan rotor untuk mengakses pautan";
+
+"Your ZIP is incomplete." = "Kod ZIP anda tidak lengkap.";
+
 "Your email is invalid." = "E-mel anda tidak sah.";
 
+"Your postal code is incomplete." = "Poskod anda tidak lengkap.";
+
+"ZIP" = "ZIP";

@@ -1,12 +1,15 @@
 //
 //  STPPaymentOptionTableViewCell.swift
-//  Stripe
+//  StripeiOS
 //
 //  Created by Ben Guo on 8/30/16.
 //  Copyright © 2016 Stripe, Inc. All rights reserved.
 //
 
 import UIKit
+
+@_spi(STP) import StripeCore
+@_spi(STP) import StripePaymentsUI
 
 class STPPaymentOptionTableViewCell: UITableViewCell {
     @objc(configureForNewCardRowWithTheme:) func configureForNewCardRow(with theme: STPTheme) {
@@ -16,7 +19,7 @@ class STPPaymentOptionTableViewCell: UITableViewCell {
         backgroundColor = theme.secondaryBackgroundColor
 
         // Left icon
-        leftIcon.image = STPImageLibrary.addIcon()
+        leftIcon.image = STPLegacyImageLibrary.addIcon()
         leftIcon.tintColor = theme.accentColor
 
         // Title label
@@ -86,7 +89,7 @@ class STPPaymentOptionTableViewCell: UITableViewCell {
     private var theme: STPTheme = .defaultTheme
     private var leftIcon = UIImageView()
     private var titleLabel = UILabel()
-    private var checkmarkIcon = UIImageView(image: STPImageLibrary.checkmarkIcon())
+    private var checkmarkIcon = UIImageView(image: STPLegacyImageLibrary.checkmarkIcon())
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -163,7 +166,7 @@ class STPPaymentOptionTableViewCell: UITableViewCell {
                     selected: selected)
             }
         } else if paymentOption is STPApplePayPaymentOption {
-            let label = STPLocalizedString("Apple Pay", "Text for Apple Pay payment method")
+            let label = String.Localized.apple_pay
             let primaryColor = primaryColorForPaymentOption(withSelected: selected)
             return NSAttributedString(
                 string: label,
@@ -239,10 +242,7 @@ class STPPaymentOptionTableViewCell: UITableViewCell {
         last4: String,
         selected: Bool
     ) -> NSAttributedString {
-        let format = STPLocalizedString(
-            "%1$@ ending in %2$@",
-            "Details of a saved card. '{card brand} ending in {last 4}' e.g. 'VISA ending in 4242'"
-        )
+        let format = String.Localized.card_brand_ending_in_last_4
         let brandString = STPCard.string(from: brand)
         let label = String(format: format, brandString, last4)
 

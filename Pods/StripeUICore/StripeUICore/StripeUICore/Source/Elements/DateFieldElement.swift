@@ -3,6 +3,7 @@
 //  StripeUICore
 //
 //  Created by Mel Ludowise on 10/1/21.
+//  Copyright © 2021 Stripe, Inc. All rights reserved.
 //
 
 import Foundation
@@ -30,7 +31,8 @@ import UIKit
             label: label,
             shouldShowChevron: false,
             pickerView: datePickerView,
-            delegate: self
+            delegate: self,
+            theme: theme
         )
         return pickerFieldView
     }()
@@ -50,6 +52,7 @@ import UIKit
     public var didUpdate: DidUpdateSelectedDate?
 
     private let label: String
+    private let theme: ElementsUITheme
 
     /**
      - Parameters:
@@ -60,6 +63,7 @@ import UIKit
        - locale: The locale to use to format the date into display text and configure the date picker
        - timeZone: The timeZone to use to format the date into display text and configure the date picker
        - didUpdate: Called when the user has selected a new date.
+       - theme: Theme for the element
 
      - Note:
        - If a minimum or maximum date is provided and `defaultDate` is outside of of that range, then the given default is ignored.
@@ -72,10 +76,11 @@ import UIKit
         maximumDate: Date? = nil,
         locale: Locale = .current,
         timeZone: TimeZone = .current,
+        theme: ElementsUITheme = .default,
         didUpdate: DidUpdateSelectedDate? = nil
     ) {
         self.label = label
-
+        self.theme = theme
         dateFormatter.locale = locale
         dateFormatter.timeZone = timeZone
 
@@ -110,6 +115,10 @@ extension DateFieldElement: Element {
     public var view: UIView {
         return pickerFieldView
     }
+    
+    public func beginEditing() -> Bool {
+        return pickerFieldView.becomeFirstResponder()
+    }
 }
 
 // MARK: - PickerFieldViewDelegate
@@ -125,7 +134,7 @@ extension DateFieldElement: PickerFieldViewDelegate {
             didUpdate?(selectedDate)
             previouslySelectedDate = selectedDate
         }
-        delegate?.didFinishEditing(element: self)
+        delegate?.continueToNextField(element: self)
     }
 }
 

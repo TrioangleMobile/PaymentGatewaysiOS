@@ -1,24 +1,109 @@
-/* The label of a text field that is optional. For example, 'Email (optional)' or 'Name (optional) */
 "%@ (optional)" = "%@ (valikuline)";
 
-/* Address line 1 placeholder for billing address form. */
+"Account number" = "Kontonumber";
+
+"Address" = "Aadress";
+
 "Address line 1" = "Aadressirida 1";
 
-/* Label for input requesting address line 2, used for international addresses */
 "Address line 2" = "Aadressirida 2";
 
-/* Country selector and postal code entry form header title */
+"Area" = "Piirkond";
+
+"BSB number" = "BSB-number";
+
+"Billing address is same as shipping" = "Arveldusaadress on sama mis tarneaadress";
+
+"Cancel" = "Tühista";
+
+"City" = "Linn";
+
+"Company" = "Ettevõte";
+
+"Continue" = "Jätka";
+
+"Country" = "Riik";
+
 "Country or region" = "Riik või regioon";
 
-/* Done button title */
+"County" = "Maakond";
+
+"Department" = "Departemang";
+
+"District" = "Regioon";
+
+"Do Si" = "Do Si";
+
 "Done" = "Valmis";
 
-/* Caption for Email field on address form */
+"Edit" = "Muutmine";
+
+"Eircode" = "Eircode";
+
 "Email" = "Meiliaadress";
 
-/* Caption for Name field on address form */
+"Emirate" = "Emiraat";
+
+"Error" = "Viga";
+
+"First" = "Esimene";
+
+"Full name" = "Täisnimi";
+
+"Incomplete phone number" = "Telefoninumber puudulik";
+
+"Island" = "Saar";
+
+"Last" = "Viimane";
+
 "Name" = "Nimi";
 
-/* Error message when email is invalid */
+"Name on account" = "Nimi kontol";
+
+"OK" = "OK";
+
+"Oblast" = "Oblast";
+
+"Other" = "Muu";
+
+"Parish" = "Vald";
+
+"Phone" = "Telefon";
+
+"Postal code" = "Sihtnumber";
+
+"Prefecture" = "Prefektuur";
+
+"Province" = "Maakond";
+
+"Remove" = "Eemalda";
+
+"Remove bank account" = "Eemaldage pangakonto";
+
+"Remove bank account ending in %@" = "Eemaldage pangakonto lõpuga %@";
+
+"State" = "Osariik";
+
+"Suburb" = "Eeslinn";
+
+"Suburb or city" = "Eeslinn või linn";
+
+"The BSB you entered is incomplete." = "Sisestatud BSB-number on puudulik.";
+
+"The ID number you entered is incomplete." = "Sisestatud isikukood on puudulik.";
+
+"The account number you entered is incomplete." = "Sisestatud kontonumber on puudulik.";
+
+"Town or city" = "Linn";
+
+"Unable to parse phone number" = "Telefoninumbri parsimine ebaõnnestus";
+
+"Use rotor to access links" = "Kasutage linkidele juurdepääsuks rootorit";
+
+"Your ZIP is incomplete." = "Teie sihtnumber on puudulik.";
+
 "Your email is invalid." = "Teie meiliaadress on kehtetu.";
 
+"Your postal code is incomplete." = "Sihtnumber on puudulik.";
+
+"ZIP" = "Sihtnr";
