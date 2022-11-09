@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PaymentHelper"
-  spec.version      = "0.0.11"
+  spec.version      = "0.0.12"
   spec.summary      = "Xcode 14 update"
 
   # This description is used to generate tags and improve search results.
