@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PaymentHelper"
-  spec.version      = "0.0.16"
+  spec.version      = "0.0.17"
   spec.summary      = "Xcode 14 update"
 
   # This description is used to generate tags and improve search results.
@@ -63,7 +63,7 @@ Xcode update for 14
   #  If this Pod runs only on iOS or OS X, then specify the platform and
   #  the deployment target. You can optionally include the target after the platform.
   #
-  spec.ios.deployment_target = "15.0"
+  spec.ios.deployment_target = "13.0"
   spec.swift_version = "5.0"
  # spec.platform     = :ios
   # spec.platform     = :ios, "5.0"
