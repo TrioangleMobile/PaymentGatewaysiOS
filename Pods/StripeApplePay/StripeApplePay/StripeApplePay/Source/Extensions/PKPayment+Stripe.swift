@@ -1,9 +1,8 @@
 //
 //  PKPayment+Stripe.swift
-//  StripeApplePay
+//  Stripe
 //
 //  Created by Ben Guo on 7/2/15.
-//  Copyright © 2015 Stripe, Inc. All rights reserved.
 //
 
 import PassKit
@@ -15,7 +14,7 @@ extension PKPayment {
     }
 
     /// Returns a fake transaction identifier with the expected ~-separated format.
-    @_spi(STP) public class func stp_testTransactionIdentifier() -> String {
+    @_spi(STP) public class func stp_testTransactionIdentifier() -> String? {
         var uuid = UUID().uuidString
         uuid = uuid.replacingOccurrences(of: "~", with: "")
 

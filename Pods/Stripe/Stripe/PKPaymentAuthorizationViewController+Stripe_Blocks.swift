@@ -1,6 +1,6 @@
 //
 //  PKPaymentAuthorizationViewController+Stripe_Blocks.swift
-//  StripeiOS
+//  Stripe
 //
 //  Created by Ben Guo on 4/19/16.
 //  Copyright © 2016 Stripe, Inc. All rights reserved.

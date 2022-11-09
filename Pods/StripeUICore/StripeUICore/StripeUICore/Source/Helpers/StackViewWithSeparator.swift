@@ -3,7 +3,6 @@
 //  StripeUICore
 //
 //  Created by Cameron Sabol on 9/22/21.
-//  Copyright © 2021 Stripe, Inc. All rights reserved.
 //
 
 import UIKit
@@ -67,7 +66,7 @@ import UIKit
         }
     }
     
-    public var borderColor: UIColor = .systemGray3 {
+    public var borderColor: UIColor = CompatibleColor.systemGray3 {
         didSet {
             backgroundView.layer.borderColor = borderColor.cgColor
         }

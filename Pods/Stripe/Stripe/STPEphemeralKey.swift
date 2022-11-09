@@ -1,13 +1,12 @@
 //
 //  STPEphemeralKey.swift
-//  StripeiOS
+//  Stripe
 //
 //  Created by Ben Guo on 5/4/17.
 //  Copyright © 2017 Stripe, Inc. All rights reserved.
 //
 
 import Foundation
-@_spi(STP) import StripePayments
 
 class STPEphemeralKey: NSObject, STPAPIResponseDecodable {
     private(set) var stripeID: String
@@ -34,7 +33,7 @@ class STPEphemeralKey: NSObject, STPAPIResponseDecodable {
         guard let response = response else {
             return nil
         }
-        let dict = response.stp_dictionaryByRemovingNulls()
+        let dict = (response as NSDictionary).stp_dictionaryByRemovingNulls() as NSDictionary
 
         // required fields
         guard
@@ -51,7 +50,7 @@ class STPEphemeralKey: NSObject, STPAPIResponseDecodable {
         var customerID: String?
         var issuingCardID: String?
         for obj in associatedObjects {
-            if let obj = obj as? [AnyHashable: Any] {
+            if let obj = obj as? NSDictionary {
                 let type = obj.stp_string(forKey: "type")
                 if type == "customer" {
                     customerID = obj.stp_string(forKey: "id")

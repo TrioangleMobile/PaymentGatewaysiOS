@@ -1,6 +1,6 @@
 //
 //  STPAddressViewModel.swift
-//  StripeiOS
+//  Stripe
 //
 //  Created by Jack Flintermann on 4/21/16.
 //  Copyright © 2016 Stripe, Inc. All rights reserved.
@@ -10,7 +10,6 @@ import Contacts
 import CoreLocation
 import UIKit
 @_spi(STP) import StripeCore
-@_spi(STP) import StripePaymentsUI
 
 protocol STPAddressViewModelDelegate: AnyObject {
     func addressViewModelDidChange(_ addressViewModel: STPAddressViewModel)

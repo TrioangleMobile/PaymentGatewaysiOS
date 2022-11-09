@@ -1,6 +1,6 @@
 //
 //  STPTheme.swift
-//  StripeiOS
+//  Stripe
 //
 //  Created by Jack Flintermann on 5/3/16.
 //  Copyright © 2016 Stripe, Inc. All rights reserved.

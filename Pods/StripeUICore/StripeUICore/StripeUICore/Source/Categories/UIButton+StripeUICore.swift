@@ -13,9 +13,5 @@ import UIKit
     class var doneButtonTitle: String {
         return STPLocalizedString("Done", "Done button title")
     }
-    
-    class var editButtonTitle: String {
-        return STPLocalizedString("Edit", "Button title to enter editing mode")
-    }
 
 }

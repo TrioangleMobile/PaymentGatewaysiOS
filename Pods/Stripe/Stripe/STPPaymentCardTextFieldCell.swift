@@ -1,13 +1,12 @@
 //
 //  STPPaymentCardTextFieldCell.swift
-//  StripeiOS
+//  Stripe
 //
 //  Created by Jack Flintermann on 6/16/16.
 //  Copyright © 2016 Stripe, Inc. All rights reserved.
 //
 
 import UIKit
-@_spi(STP) import StripePaymentsUI
 
 class STPPaymentCardTextFieldCell: UITableViewCell {
     private(set) weak var paymentField: STPPaymentCardTextField?
