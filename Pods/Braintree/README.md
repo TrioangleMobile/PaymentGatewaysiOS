@@ -14,12 +14,12 @@ v5 is the latest major version of Braintree iOS. To update from v4, see the [v5 
 
 ## Supported Payment Methods
 
-- [Credit Cards](https://developers.braintreepayments.com/guides/credit-cards/overview)
-- [PayPal](https://developers.braintreepayments.com/guides/paypal/overview)
-- [Pay with Venmo](https://developers.braintreepayments.com/guides/venmo/overview)
-- [Apple Pay](https://developers.braintreepayments.com/guides/apple-pay/overview)
-- [ThreeDSecure](https://developers.braintreepayments.com/guides/3d-secure/overview)
-- [Visa Checkout](https://developers.braintreepayments.com/guides/visa-checkout/overview)
+- [Credit Cards](https://developer.paypal.com/braintree/docs/guides/credit-cards/overview)
+- [PayPal](https://developer.paypal.com/braintree/docs/guides/paypal/overview)
+- [Pay with Venmo](https://developer.paypal.com/braintree/docs/guides/venmo/overview)
+- [Apple Pay](https://developer.paypal.com/braintree/docs/guides/apple-pay/overview)
+- [ThreeDSecure](https://developer.paypal.com/braintree/docs/guides/3d-secure/overview)
+- [Visa Checkout](https://developer.paypal.com/braintree/docs/guides/secure-remote-commerce/overview)
 
 ## Installation
 
@@ -55,8 +55,6 @@ pod 'Braintree/DataCollector'
 pod 'Braintree/Venmo'
 ```
 
-*Note:* If you are using version 4.x.x of the Braintree iOS SDK in Xcode 12, you may see the warning `The iOS Simulator deployment target is set to 8.0, but the range of supported deployment target versions is 9.0 to 14.0.99`. This will not prevent your app from compiling. This is a [CocoaPods issue](https://github.com/CocoaPods/CocoaPods/issues/7314) with a known workaround.
-
 ### Carthage
 Add `github "braintree/braintree_ios"` to your `Cartfile`, and [add the frameworks to your project](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application).
 
@@ -71,7 +69,7 @@ Next, read the [**full documentation**](https://developer.paypal.com/braintree/d
 
 ## Versions
 
-This SDK abides by our Client SDK Deprecation Policy. For more information on the potential statuses of an SDK check our [developer docs](http://developers.braintreepayments.com/guides/client-sdk/deprecation-policy).
+This SDK abides by our Client SDK Deprecation Policy. For more information on the potential statuses of an SDK check our [developer docs](https://developer.paypal.com/braintree/docs/guides/client-sdk/deprecation-policy/ios/v5).
 
 | Major version number | Status | Released | Deprecated | Unsupported |
 | -------------------- | ------ | -------- | ---------- | ----------- |
@@ -82,7 +80,12 @@ Versions 4.9.6 and below use outdated SSL certificates and are unsupported.
 
 ## Demo
 
-A demo app is included in the project. To run it, run `pod install` and then open `Braintree.xcworkspace` in Xcode. Xcode 13+ is required to run the demo app.
+A demo app is included in the project. To run it you will need to do the following:
+    1. Run `pod install`
+    2. Resolve the Swift Package Manager packages if needed: `File` > `Packages` > `Resolve Package Versions` or by running `swift package resolve` in Terminal
+    3. Open `Braintree.xcworkspace` in Xcode. 
+
+Xcode 13+ is required to run the demo app.
 
 ## Contributing
 

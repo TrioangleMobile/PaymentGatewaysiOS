@@ -66,6 +66,10 @@ NSString * const BTThreeDSecureFlowValidationErrorsKey = @"com.braintreepayments
             requestParameters[@"exemptionRequested"] = @(request.exemptionRequested);
         }
 
+        if (request.requestedExemptionTypeAsString) {
+            requestParameters[@"requestedExemptionType"] = request.requestedExemptionTypeAsString;
+        }
+
         if (request.dataOnlyRequested) {
             requestParameters[@"dataOnlyRequested"] = @(request.dataOnlyRequested);
         }
@@ -107,6 +111,9 @@ NSString * const BTThreeDSecureFlowValidationErrorsKey = @"com.braintreepayments
                   completion:^(BTJSON *body, __unused NSHTTPURLResponse *response, NSError *error) {
             
             if (error) {
+                if (error.code == NETWORK_CONNECTION_LOST_CODE) {
+                    [self.apiClient sendAnalyticsEvent:@"ios.three-d-secure.lookup.network-connection.failure"];
+                }
                 // Provide more context for card validation error when status code 422
                 if ([error.domain isEqualToString:BTHTTPErrorDomain] &&
                     error.code == BTHTTPErrorCodeClientError &&

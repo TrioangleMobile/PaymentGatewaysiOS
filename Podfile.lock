@@ -1,26 +1,26 @@
 PODS:
-  - Braintree (5.20.1):
-    - Braintree/Card (= 5.20.1)
-    - Braintree/Core (= 5.20.1)
-    - Braintree/PayPal (= 5.20.1)
-  - Braintree/ApplePay (5.20.1):
+  - Braintree (5.21.0):
+    - Braintree/Card (= 5.21.0)
+    - Braintree/Core (= 5.21.0)
+    - Braintree/PayPal (= 5.21.0)
+  - Braintree/ApplePay (5.21.0):
     - Braintree/Core
-  - Braintree/Card (5.20.1):
+  - Braintree/Card (5.21.0):
     - Braintree/Core
-  - Braintree/Core (5.20.1)
-  - Braintree/PaymentFlow (5.20.1):
-    - Braintree/Core
-    - Braintree/PayPalDataCollector
-  - Braintree/PayPal (5.20.1):
+  - Braintree/Core (5.21.0)
+  - Braintree/PaymentFlow (5.21.0):
     - Braintree/Core
     - Braintree/PayPalDataCollector
-  - Braintree/PayPalDataCollector (5.20.1)
-  - Braintree/ThreeDSecure (5.20.1):
+  - Braintree/PayPal (5.21.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - Braintree/PayPalDataCollector (5.21.0)
+  - Braintree/ThreeDSecure (5.21.0):
     - Braintree/Card
     - Braintree/PaymentFlow
-  - Braintree/UnionPay (5.20.1):
+  - Braintree/UnionPay (5.21.0):
     - Braintree/Card
-  - Braintree/Venmo (5.20.1):
+  - Braintree/Venmo (5.21.0):
     - Braintree/Core
   - BraintreeDropIn (9.3.0):
     - Braintree/ApplePay (~> 5.5)
@@ -46,7 +46,7 @@ PODS:
     - StripeCore (= 22.8.4)
 
 DEPENDENCIES:
-  - Braintree (~> 5.20.1)
+  - Braintree (~> 5.21.0)
   - BraintreeDropIn
   - Stripe (~> 22.8.4)
 
@@ -60,13 +60,13 @@ SPEC REPOS:
     - StripeUICore
 
 SPEC CHECKSUMS:
-  Braintree: 4a27d741d164591ac87cecfaa9a02adb8eb92422
+  Braintree: 629e2586433edad0b69a7d2eaba0910b7801db49
   BraintreeDropIn: ed7292064dca8738cfbb8445c6984f144328ffa9
   Stripe: 59f6659e8ea413def19c97c57e23f5ec6ea48cf8
   StripeApplePay: 6e9aebd3d248464836e9fbdaef6e5fb1817d56a6
   StripeCore: 193f27552fb98108ebfe0df11651fe5f38948305
   StripeUICore: 6a5bbea0164d63bd91000f001903e7901859e1a4
 
-PODFILE CHECKSUM: 987f2cff2709d778a870775eb815ffa897adde3f
+PODFILE CHECKSUM: ed253cdf0d276b739a0ddd6026aa25fd296acbba
 
 COCOAPODS: 1.15.0

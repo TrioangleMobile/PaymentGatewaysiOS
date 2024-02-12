@@ -55,7 +55,10 @@ NSString *const BTCardClientGraphQLTokenizeFeature = @"tokenize_credit_cards";
 
 - (void)tokenizeCard:(BTCard *)card completion:(void (^)(BTCardNonce *tokenizedCard, NSError *error))completion {
     BTCardRequest *request = [[BTCardRequest alloc] initWithCard:card];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     [self tokenizeCard:request options:nil completion:completion];
+#pragma clang diagnostic pop
 }
 
 
@@ -93,13 +96,16 @@ NSString *const BTCardClientGraphQLTokenizeFeature = @"tokenize_credit_cards";
                       completion:^(BTJSON * _Nullable body, __unused NSHTTPURLResponse * _Nullable response, NSError * _Nullable error)
              {
                  if (error) {
+                     if (error.code == NETWORK_CONNECTION_LOST_CODE) {
+                         [self.apiClient sendAnalyticsEvent:@"ios.tokenize-card.graphQL.network-connection.failure"];
+                     }
                      NSHTTPURLResponse *response = error.userInfo[BTHTTPURLResponseKey];
                      NSError *callbackError = error;
 
                      if (response.statusCode == 422) {
-                             callbackError = [NSError errorWithDomain:BTCardClientErrorDomain
-                                                                 code:BTCardClientErrorTypeCustomerInputInvalid
-                                                             userInfo:[self.class validationErrorUserInfo:error.userInfo]];
+                         if (error.userInfo) {
+                             callbackError = [self constructCallbackErrorForErrorUserInfo:error.userInfo error:error];
+                         }
                      }
 
                      [self sendGraphQLAnalyticsEventWithSuccess:NO];
@@ -121,13 +127,16 @@ NSString *const BTCardClientGraphQLTokenizeFeature = @"tokenize_credit_cards";
                       completion:^(BTJSON *body, __unused NSHTTPURLResponse *response, NSError *error)
              {
                  if (error != nil) {
+                     if (error.code == NETWORK_CONNECTION_LOST_CODE) {
+                         [self.apiClient sendAnalyticsEvent:@"ios.tokenize-card.network-connection.failure"];
+                     }
                      NSHTTPURLResponse *response = error.userInfo[BTHTTPURLResponseKey];
                      NSError *callbackError = error;
 
                      if (response.statusCode == 422) {
-                         callbackError = [NSError errorWithDomain:BTCardClientErrorDomain
-                                                             code:BTCardClientErrorTypeCustomerInputInvalid
-                                                         userInfo:[self.class validationErrorUserInfo:error.userInfo]];
+                         if (error.userInfo) {
+                             callbackError = [self constructCallbackErrorForErrorUserInfo:error.userInfo error:error];
+                         }
                      }
 
                      if (request.enrollmentID) {
@@ -201,6 +210,8 @@ NSString *const BTCardClientGraphQLTokenizeFeature = @"tokenize_credit_cards";
     if (request.card.parameters) {
         NSMutableDictionary *mutableCardParameters = [request.card.parameters mutableCopy];
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         if (request.enrollmentID) {
             // Convert the immutable options dictionary so to write to it without overwriting any existing options
             NSMutableDictionary *unionPayEnrollment = [NSMutableDictionary new];
@@ -210,6 +221,7 @@ NSString *const BTCardClientGraphQLTokenizeFeature = @"tokenize_credit_cards";
             }
             mutableCardParameters[@"options"] = [mutableCardParameters[@"options"] mutableCopy];
             mutableCardParameters[@"options"][@"union_pay_enrollment"] = unionPayEnrollment;
+#pragma clang diagnostic pop
         }
 
         parameters[@"credit_card"] = [mutableCardParameters copy];
@@ -235,6 +247,32 @@ NSString *const BTCardClientGraphQLTokenizeFeature = @"tokenize_credit_cards";
     NSArray *graphQLFeatures = [configuration.json[@"graphQL"][@"features"] asStringArray];
 
     return graphQLFeatures && [graphQLFeatures containsObject:BTCardClientGraphQLTokenizeFeature];
+}
+
+- (NSError *)constructCallbackErrorForErrorUserInfo:(NSDictionary *)errorUserInfo error:(NSError *)error {
+    NSError *callbackError = error;
+    BTJSON *errorCode = nil;
+    
+    BTJSON *errorResponse = [error.userInfo objectForKey:BTHTTPJSONResponseBodyKey];
+    BTJSON *fieldErrors = [errorResponse[@"fieldErrors"] asArray].firstObject;
+    errorCode = [fieldErrors[@"fieldErrors"] asArray].firstObject[@"code"];
+
+    if (errorCode == nil) {
+        BTJSON *errorResponse = [errorUserInfo objectForKey:BTHTTPJSONResponseBodyKey];
+        errorCode = [errorResponse[@"errors"] asArray].firstObject[@"extensions"][@"legacyCode"];
+    }
+
+    // Gateway error code for card already exists
+    if ([errorCode.asString  isEqual: @"81724"]) {
+        callbackError = [NSError errorWithDomain:BTCardClientErrorDomain
+                                            code:BTCardClientErrorTypeCardAlreadyExists
+                                        userInfo:[self.class validationErrorUserInfo:error.userInfo]];
+    } else {
+        callbackError = [NSError errorWithDomain:BTCardClientErrorDomain
+                                            code:BTCardClientErrorTypeCustomerInputInvalid
+                                        userInfo:[self.class validationErrorUserInfo:error.userInfo]];
+    }
+    return callbackError;
 }
 
 @end

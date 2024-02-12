@@ -59,12 +59,13 @@
 - (void)handleRequest:(BTPaymentFlowRequest *)request client:(BTAPIClient *)apiClient paymentDriverDelegate:(id<BTPaymentFlowDriverDelegate>)delegate {
     self.paymentFlowDriverDelegate = delegate;
     BTLocalPaymentRequest *localPaymentRequest = (BTLocalPaymentRequest *)request;
-    self.correlationID = [PPDataCollector clientMetadataID:nil];
     [apiClient fetchOrReturnRemoteConfiguration:^(__unused BTConfiguration *configuration, NSError *configurationError) {
         if (configurationError) {
             [delegate onPaymentComplete:nil error:configurationError];
             return;
         }
+
+        self.correlationID = [PPDataCollector clientMetadataID:nil isSandbox:[configuration.environment isEqualToString:@"sandbox"]];
 
         NSError *integrationError;
 
@@ -176,6 +177,10 @@
                      return;
                  }
              } else {
+                 if (error.code == NETWORK_CONNECTION_LOST_CODE) {
+                     [apiClient sendAnalyticsEvent:@"ios.local-payment-methods.network-connection.failure"];
+                 }
+
                  [delegate onPaymentWithURL:nil error:error];
              }
          }];
@@ -218,6 +223,9 @@
                   completion:^(BTJSON *body, __unused NSHTTPURLResponse *response, NSError *error)
          {
              if (error) {
+                 if (error.code == NETWORK_CONNECTION_LOST_CODE) {
+                     [self.paymentFlowDriverDelegate.apiClient sendAnalyticsEvent:@"ios.local-payment-methods.network-connection.failure"];
+                 }
                  [self.paymentFlowDriverDelegate onPaymentComplete:nil error:error];
                  return;
              } else {

@@ -51,7 +51,7 @@ static BTVenmoDriver *appSwitchedDriver;
 
 - (instancetype)initWithAPIClient:(BTAPIClient *)apiClient {
     if (self = [super init]) {
-        _apiClient = [apiClient copyWithSource:BTClientMetadataSourceVenmoApp integration:apiClient.metadata.integration];
+        _apiClient = apiClient;
     }
     return self;
 }
@@ -159,6 +159,9 @@ static BTVenmoDriver *appSwitchedDriver;
 
             [self.apiClient POST:@"" parameters:params httpType:BTAPIClientHTTPTypeGraphQLAPI completion:^(BTJSON *body, __unused NSHTTPURLResponse *response, NSError *err) {
                 if (err) {
+                    if (err.code == NETWORK_CONNECTION_LOST_CODE) {
+                        [self.apiClient sendAnalyticsEvent:@"ios.pay-with-venmo.network-connection.failure"];
+                    }
                     NSError *error = [NSError errorWithDomain:BTVenmoDriverErrorDomain
                                                          code:BTVenmoDriverErrorTypeInvalidRequestURL
                                                      userInfo:@{NSLocalizedDescriptionKey: @"Failed to fetch a Venmo paymentContextID while constructing the requestURL."}];
@@ -210,6 +213,9 @@ static BTVenmoDriver *appSwitchedDriver;
               parameters:params
               completion:^(BTJSON *body, __unused NSHTTPURLResponse *response, NSError *error) {
                   if (error) {
+                      if (error.code == NETWORK_CONNECTION_LOST_CODE) {
+                          [self.apiClient sendAnalyticsEvent:@"ios.pay-with-venmo.network-connection.failure"];
+                      }
                       [self.apiClient sendAnalyticsEvent:@"ios.pay-with-venmo.vault.failure"];
                       self.appSwitchCompletionBlock(nil, error);
                   } else {
@@ -280,6 +286,9 @@ static BTVenmoDriver *appSwitchedDriver;
 
             [self.apiClient POST:@"" parameters:params httpType:BTAPIClientHTTPTypeGraphQLAPI completion:^(BTJSON *body, __unused NSHTTPURLResponse *response, NSError *error) {
                 if (error) {
+                    if (error.code == NETWORK_CONNECTION_LOST_CODE) {
+                        [self.apiClient sendAnalyticsEvent:@"ios.pay-with-venmo.network-connection.failure"];
+                    }
                     [self.apiClient sendAnalyticsEvent:@"ios.pay-with-venmo.appswitch.handle.client-failure"];
                     self.appSwitchCompletionBlock(nil, error);
                     self.appSwitchCompletionBlock = nil;

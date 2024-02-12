@@ -6,6 +6,8 @@
 #import <BraintreeCore/BTClientMetadata.h>
 #endif
 
+#define NETWORK_CONNECTION_LOST_CODE -1005
+
 @class BTConfiguration;
 @class BTJSON;
 
@@ -56,7 +58,7 @@ typedef NS_ENUM(NSInteger, BTAPIClientHTTPType) {
 /**
  Initialize a new API client.
 
- @param authorization Your tokenization key, client token, or PayPal ID Token. Passing an invalid value may return `nil`.
+ @param authorization Your tokenization key or client token. Passing an invalid value may return `nil`.
  @return A Braintree API client, or `nil` if initialization failed.
 */
 - (nullable instancetype)initWithAuthorization:(NSString *)authorization;
@@ -154,6 +156,11 @@ typedef NS_ENUM(NSInteger, BTAPIClientHTTPType) {
  Base initializer - do not use.
  */
 - (instancetype)init __attribute__((unavailable("Use initWithAuthorization: instead.")));
+
+/**
+ :nodoc: This method is exposed for internal Braintree use only. Do not use. It is not covered by Semantic Versioning and may change or be removed at any time.
+*/
+- (void)sendAnalyticsEvent:(NSString *)eventName;
 
 @end
 
