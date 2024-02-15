@@ -7,8 +7,8 @@ target 'PaymentHelper' do
 
   # Pods for PaymentHelper
     pod 'Stripe','~> 22.8.4'
-    pod 'Braintree','~> 5.21.0'
-    pod 'BraintreeDropIn'
+    pod 'Braintree','~> 5.24.1'
+    pod 'BraintreeDropIn','~> 9.11.0'
     
   target 'PaymentHelperTests' do
     # Pods for testing
